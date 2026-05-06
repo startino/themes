@@ -1,7 +1,7 @@
 # preferred_background: #253a3a
 fish_color_normal #c4eeee
 fish_color_command #00c6b2
-fish_color_param #ffb6b7
+fish_color_param #eebebe
 fish_color_keyword #ffb4d4
 fish_color_quote #47e0a5
 fish_color_redirection #ffb4d4

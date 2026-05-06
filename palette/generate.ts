@@ -171,9 +171,15 @@ const TEXT_L_LIGHT = 0.30;
  * toward its Catppuccin hex without checking the style guide first.
  */
 export const ACCENTS = [
-  { id: 'rosewater', h: 20,  c: 0.06,
+  // Rosewater & flamingo are warm-neutral accents — Claude Code's user-input
+  // text uses rosewater, so against Neptune's green-tinted surfaces, our old
+  // pinky/saturated rosewater read as a complementary clash. Catppuccin
+  // matches their rosewater closely to a peachy cream that harmonizes on
+  // any background. We mirror their per-flavor c, h here (not just L) so
+  // these slots feel as "off-brand-neutral" as Catppuccin's do.
+  { id: 'rosewater', h: 30, c: { mercury: 0.105, mars: 0.034, jupiter: 0.029, neptune: 0.024 },
     L: { mercury: 0.714, mars: 0.895, jupiter: 0.911, neptune: 0.923 } },
-  { id: 'flamingo',  h: 18,  c: 0.10,
+  { id: 'flamingo',  h: 18, c: { mercury: 0.126, mars: 0.055, jupiter: 0.048, neptune: 0.042 },
     L: { mercury: 0.686, mars: 0.844, jupiter: 0.863, neptune: 0.880 } },
   { id: 'pink',      h: 352, c: 0.22, alias: 'secondary' as const, // #ff4fad lifted
     L: { mercury: 0.726, mars: 0.850, jupiter: 0.861, neptune: 0.870 } },
@@ -348,15 +354,21 @@ function buildFlavor(spec: typeof FLAVORS[number]): Flavor {
   // Build all colors keyed by id. Emit order is applied at serialize time.
   const colors: Record<string, ColorEntry> = {};
 
-  // Accents — each uses its own per-flavor L from the Catppuccin-mirrored map
+  // Accents — each uses its own per-flavor L from the Catppuccin-mirrored map.
+  // Most accents share a single chroma across flavors; rosewater/flamingo
+  // mirror Catppuccin's per-flavor chroma drop (latte high → mocha low) since
+  // Catppuccin desaturates these warm neutrals as the flavor darkens.
   ACCENTS.forEach((a, i) => {
     const accentL = a.L[spec.id as keyof typeof a.L];
+    const accentC = typeof a.c === 'number'
+      ? a.c
+      : (a.c as Record<string, number>)[spec.id];
     colors[a.id] = buildColor({
       id: a.id,
       name: titleCase(a.id),
       order: i,
       l: accentL,
-      c: a.c,
+      c: accentC,
       h: a.h,
       accent: true,
       alias: 'alias' in a ? a.alias : undefined,
