@@ -1,0 +1,26 @@
+{
+  "name": "@startino/themes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Startino's Catppuccin-style theme system. Proprietary brand assets.",
+  "scripts": {
+    "build": "bun palette/generate.ts && bun compiler/prism.ts --all",
+    "check": "bun compiler/prism.ts --all --check",
+    "palette": "bun palette/generate.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "culori": "^4.0.1",
+    "diff": "^7.0.0",
+    "gray-matter": "^4.0.3",
+    "nunjucks": "^3.2.4",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/diff": "^7.0.0",
+    "@types/nunjucks": "^3.2.6",
+    "typescript": "^5.6.0"
+  }
+}

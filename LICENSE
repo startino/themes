@@ -1,0 +1,21 @@
+Copyright (c) 2026 Startino. All Rights Reserved.
+
+This repository contains the Startino color palette ("the Palette"),
+its named flavor system, generator code, port templates, and all
+generated theme files derived from the Palette (collectively, "the
+Materials"). The Materials are proprietary brand assets of Startino.
+
+Use within Startino-owned projects, deployments, and personal
+configurations of Startino employees and contractors is permitted
+without further authorization.
+
+External use — including but not limited to redistribution, derivative
+palettes, public forks, or incorporation into non-Startino products —
+requires explicit written permission. Contact jonas.lindberg@starti.no.
+
+The compiler source code under `compiler/` and the structural
+documentation under `docs/` may be referenced for educational purposes;
+direct reuse can be granted on request and is not the default grant of
+this license.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

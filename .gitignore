@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# Build outputs from /tmp tests etc — but ports/*/dist/ IS committed
+.tmp/
