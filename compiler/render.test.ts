@@ -27,9 +27,9 @@ describe('single.njk — no matrix', () => {
     expect(outputs).toHaveLength(1);
   });
 
-  test('output body contains neptune base hex #051d1d', () => {
+  test('output body contains neptune base hex #061c1d', () => {
     const [out] = renderTemplate(fixture('single.njk'), palette);
-    expect(out.body).toContain('#051d1d');
+    expect(out.body).toContain('#061c1d');
   });
 
   test('output body contains neptune green hex #45dfa4', () => {
@@ -61,7 +61,7 @@ describe('per-flavor.njk — matrix:[flavor]', () => {
   test('neptune output contains base and green hex', () => {
     const outputs = renderTemplate(fixture('per-flavor.njk'), palette);
     const neptune = outputs.find((o) => o.path.endsWith('neptune.txt'))!;
-    expect(neptune.body).toContain('#051d1d');
+    expect(neptune.body).toContain('#061c1d');
     expect(neptune.body).toContain('#45dfa4');
     // secondary = pink (L=0.870 per Catppuccin Mocha methodology)
     expect(neptune.body).toContain('#ffbfda');

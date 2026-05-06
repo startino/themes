@@ -1,27 +1,27 @@
-# preferred_background: #203b3b
-fish_color_normal #bcf0f1
+# preferred_background: #253a3a
+fish_color_normal #c4eeee
 fish_color_command #00c6b2
 fish_color_param #ffb6b7
 fish_color_keyword #ffb4d4
 fish_color_quote #47e0a5
 fish_color_redirection #ffb4d4
 fish_color_end #fc995e
-fish_color_comment #668c8d
+fish_color_comment #6c8b8b
 fish_color_error #ff6b85
-fish_color_gray #527778
-fish_color_selection --background=#2e4b4b
-fish_color_search_match --background=#2e4b4b
+fish_color_gray #597676
+fish_color_selection --background=#334a4a
+fish_color_search_match --background=#334a4a
 fish_color_option #47e0a5
 fish_color_operator #ffb4d4
 fish_color_escape #f191af
-fish_color_autosuggestion #527778
+fish_color_autosuggestion #597676
 fish_color_cancel #ff6b85
 fish_color_cwd #edc85f
 fish_color_user #5fcbd7
 fish_color_host #00c6b2
 fish_color_host_remote #47e0a5
 fish_color_status #ff6b85
-fish_pager_color_progress #527778
+fish_pager_color_progress #597676
 fish_pager_color_prefix #ffb4d4
-fish_pager_color_completion #bcf0f1
-fish_pager_color_description #527778
+fish_pager_color_completion #c4eeee
+fish_pager_color_description #597676

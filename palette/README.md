@@ -14,12 +14,15 @@ Single source of truth for every Startino color, in every flavor.
 ### 12 neutrals (per flavor)
 
 Hue-tinted at H=197 (the green tint inherited from the original `#171919`
-seed). Chroma is **per-role**, copied from Catppuccin's official neutrals
-of the paired flavor (mercury↔latte, mars↔frappé, jupiter↔macchiato,
-neptune↔mocha) so the saturation ramps the same way Catppuccin's does:
-~0.020 at `crust` up to ~0.043 at `text`. The tint is now visible (not
-just present in math); Neptune `base` lands at `#051d1d`, replacing the
-near-grey `#171919` of earlier revisions.
+seed). Chroma is **per-role**, calibrated at build time via CIEDE2000 to
+match the perceptual saturation of Catppuccin's official neutrals from the
+paired flavor (mercury↔latte, mars↔frappé, jupiter↔macchiato,
+neptune↔mocha). We don't copy Catppuccin's OKLCH chromas verbatim —
+green at h=197 reads more saturated than purple at h=285 at identical
+numeric C, so doing so over-tints. Instead we solve for the C at our hue
+that produces the same ΔE2000 from achromatic, role by role. Neptune
+`base` lands at `#061c1d`, replacing the near-grey `#171919` of the
+original revision.
 
 | Role       | Use                                           |
 | ---------- | --------------------------------------------- |
@@ -77,11 +80,13 @@ for any other without breaking visual hierarchy.
 | Neptune ★ | 0.211   | far/cold/deep — anchor |
 
 ★ Neptune is anchored to OKLCH `L=0.211, h=197` (the lightness/hue of
-the original `#171919` seed). Chroma now matches Catppuccin Mocha's
-base chroma (~0.030), making the green tint visible — the rendered hex
-is `#051d1d`, replacing `#171919` from earlier revisions. Other flavors
-mirror Catppuccin's lightness progression so the "feel" of switching
-flavors is calibrated to a system many already know.
+the original `#171919` seed). Chroma is solved at build time so the
+green tint feels as saturated as Catppuccin Mocha's purple tint at the
+matching role (CIEDE2000 ΔE-from-achromatic parity, not raw OKLCH C
+parity). The rendered hex is `#061c1d`, replacing `#171919` from
+earlier revisions. Other flavors mirror Catppuccin's lightness
+progression so the "feel" of switching flavors is calibrated to a
+system many already know.
 
 ## Updating the palette
 

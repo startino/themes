@@ -44,10 +44,12 @@ describe('palette structure', () => {
 });
 
 describe('brand anchors', () => {
-  test('Neptune base is exactly #051d1d (green-tinted dark anchor)', () => {
-    // Was #171919 (C=0.003) before adopting Catppuccin Mocha base chroma.
-    // Now C=0.030 at L=0.211, h=197 → visible green tint, deliberate.
-    expect(palette.neptune.colors.base.hex).toBe('#051d1d');
+  test('Neptune base is exactly #061c1d (green-tinted dark anchor)', () => {
+    // History: #171919 (C=0.003, near-grey) → #051d1d (raw Mocha-base
+    // chroma copied) → #061c1d (CIEDE2000-calibrated to match Mocha base
+    // perceived saturation at our hue, since green at h=197 reads more
+    // vivid than purple at h=285 at identical OKLCH C).
+    expect(palette.neptune.colors.base.hex).toBe('#061c1d');
   });
 
   test('Neptune base sits at L=0.211 with green tint visibly applied', () => {

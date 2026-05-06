@@ -15,18 +15,18 @@
 @define-color sapphire   #62c5fb;
 @define-color blue       #0dc9b4;
 @define-color lavender   #a2d0ab;
-@define-color text       #c0eff0;
-@define-color subtext1   #a5d1d1;
-@define-color subtext0   #8eb7b8;
-@define-color overlay2   #739b9b;
-@define-color overlay1   #5e8383;
-@define-color overlay0   #486c6c;
-@define-color surface2   #38595a;
-@define-color surface1   #2a4b4b;
-@define-color surface0   #1e3d3d;
-@define-color base       #0e2c2c;
-@define-color mantle     #0c2525;
-@define-color crust      #0b1e1f;
+@define-color text       #c7eded;
+@define-color subtext1   #abcfcf;
+@define-color subtext0   #95b5b6;
+@define-color overlay2   #79999a;
+@define-color overlay1   #648282;
+@define-color overlay0   #4e6a6b;
+@define-color surface2   #3e5858;
+@define-color surface1   #2f4a4a;
+@define-color surface0   #243c3c;
+@define-color base       #142b2b;
+@define-color mantle     #102425;
+@define-color crust      #0d1e1e;
 
 /* Brand aliases — mint primary, pink secondary */
 @define-color accent     #51e8ac;
