@@ -69,6 +69,16 @@ const TEXT_L_LIGHT = 0.30;
  *
  * Hues (h) and chromas (c) are Startino's own tuned values — NOT copied
  * from Catppuccin. Only the L methodology is borrowed.
+ *
+ * IMPORTANT — Slot names are port-compatibility identifiers, not value
+ * contracts. The `id` of each row matches Catppuccin's slot names so
+ * downstream port templates (kitty, tmux, waybar, …) reference them by the
+ * same name a Catppuccin port author expects. The hex each slot emits is
+ * defined HERE and may deliberately diverge from Catppuccin's hex for the
+ * same name — for example, `mauve` may emit pink's hex, and `blue` may emit
+ * brand-teal's hex, to surface Startino's two-color brand pair more often.
+ * See `docs/style-guide.md` §7 for the rule. Do not "correct" a slot back
+ * toward its Catppuccin hex without checking the style guide first.
  */
 export const ACCENTS = [
   { id: 'rosewater', h: 20,  c: 0.06,

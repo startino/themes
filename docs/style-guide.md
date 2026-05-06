@@ -134,15 +134,62 @@ the port README, and open an issue so the guide can be updated.
 
 ---
 
+## 7. Slot Names vs. Color Values
+
+Catppuccin's 14 accent slot names (`rosewater`, `flamingo`, `pink`, `mauve`,
+`red`, `maroon`, `peach`, `yellow`, `green`, `teal`, `sky`, `sapphire`, `blue`,
+`lavender`) are kept **verbatim as port-compatibility identifiers**. They are
+**not** a contract about what hex each slot must produce.
+
+Concretely:
+
+- A port author looking for "the catppuccin equivalent of mauve" finds a slot
+  named `mauve` in Startino, exactly as expected. No template rewrite required.
+- The hex that slot emits is governed by Startino's palette, not Catppuccin's.
+  Where Startino's brand grammar diverges from Catppuccin's accent rotation,
+  the *value* changes; the *name* does not.
+
+This is deliberate. Some slots that Catppuccin uses as standalone accents
+(e.g. `mauve` for keywords, `blue` for functions/links) are remapped in
+Startino to surface the two-color brand pair (`green`, `pink`) and the brand
+teal more often than Catppuccin's even rotation would. For example:
+
+- `mauve` may emit hex equal to `pink` so catppuccin modules referencing
+  `@thm_mauve` render as the secondary brand color.
+- `blue` may emit hex equal to `teal` (anchored at the brand teal) so
+  modules referencing `@thm_blue` render as a brand color.
+
+When this happens, the §4 Syntax Highlighting table still lists slot names
+as Catppuccin assigns them — keywords are still `mauve`, functions still
+`blue` — but the *visible* color a reader sees is whatever Startino's
+palette currently emits for that slot. The §1 Brand Inviolables (green is
+always primary, pink is always secondary) remain in force; the remapping
+extends brand visibility, never replaces brand semantics.
+
+Port authors and consumers should:
+
+1. Reference slots by name (`@thm_mauve`, `@define-color blue`, etc.) for
+   port portability.
+2. Trust that the hex behind a slot is brand-correct for whichever flavor
+   is loaded.
+3. Not assume any slot's hex matches its Catppuccin counterpart byte-for-byte.
+
+If a remap removes a meaningful distinction Catppuccin relied on (e.g. ANSI
+normal/bright magenta both emitting the same hex when `mauve == pink`), the
+ANSI map or affected port shall remap the dependent slot to keep the
+distinction. See §6 (Override Clause) for the legibility-wins principle.
+
 ## Rationale
 
 Catppuccin's role names (`crust`, `mantle`, `base`, `surface*`, `overlay*`,
-`subtext*`, `text`) are adopted verbatim because template portability depends
-on a shared vocabulary. Every Catppuccin port template that uses these names
-can be mechanically translated to a Startino port with a flavor-name
-substitution pass and no structural rewrite. The `alias: primary / secondary`
-layer is added on top — not instead — of these names, giving Startino's two
-fixed brand accents a stable semantic handle that travels with every port
-without forcing port authors to remember which palette accent maps to the
-brand at any given time. Template code says `{{ primary }}` and gets the right
-green regardless of which flavor is being compiled.
+`subtext*`, `text`, plus all 14 accent names) are adopted verbatim because
+template portability depends on a shared vocabulary. Every Catppuccin port
+template that uses these names can be mechanically translated to a Startino
+port with a flavor-name substitution pass and no structural rewrite. The
+`alias: primary / secondary` layer is added on top — not instead — of these
+names, giving Startino's two fixed brand accents a stable semantic handle
+that travels with every port without forcing port authors to remember which
+palette accent maps to the brand at any given time. Template code says
+`{{ primary }}` and gets the right green regardless of which flavor is being
+compiled. Section 7 governs the converse direction: when the slot name is
+shared with Catppuccin but the emitted hex deliberately diverges.

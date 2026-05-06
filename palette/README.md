@@ -36,6 +36,14 @@ Equal OKLCH lightness band per flavor (0.809 in dark flavors, 0.55 in
 Mercury). This is the perceptual-parity rule — any accent can stand in
 for any other without breaking visual hierarchy.
 
+> **Slot names are Catppuccin-compatibility identifiers, not value
+> contracts.** Some slots in this table have hexes that deliberately
+> diverge from their Catppuccin counterparts to surface Startino's brand
+> pair more often. See [`docs/style-guide.md` §7](../docs/style-guide.md)
+> for the full rule. The "Recommended use" column below describes the
+> Catppuccin semantic the slot name is *associated* with — what each slot
+> *renders as* is governed by `generate.ts`.
+
 | Role        | Brand alias | Recommended use                        |
 | ----------- | ----------- | -------------------------------------- |
 | `green`     | `primary`   | Brand mint. Always primary.            |
