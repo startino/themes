@@ -4,7 +4,7 @@ Catppuccin-style theme system for Startino. One palette, many ports.
 
 - **Palette** — `palette/palette.json` is the canonical artifact, generated from `palette/generate.ts`.
 - **Compiler** — `compiler/prism.ts` renders Nunjucks port templates against the palette.
-- **Ports** — `ports/<tool>/` per-tool theme generators (Tailwind, shadcn-svelte, tmux, fish, …).
+- **Ports** — `ports/<tool>/` per-tool theme generators (shadcn, tmux, fish, …).
 - **Style guide** — `docs/style-guide.md` codifies role assignments and brand rules.
 
 ## Quick start
