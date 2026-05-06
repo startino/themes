@@ -63,18 +63,36 @@ describe('brand anchors', () => {
   });
 });
 
-describe('perceptual parity (dark flavors)', () => {
-  // All accents in dark flavors should land on the same OKLCH L band.
-  // Catppuccin's discipline — what makes any accent swap-able for any other.
-  for (const flavor of FLAVORS.filter((f) => f.isDark)) {
-    test(`${flavor.name} accents share lightness within 0.01`, () => {
-      const f = palette[flavor.id];
-      const Ls = ACCENTS.map((a) => f.colors[a.id].oklch.l);
-      const min = Math.min(...Ls);
-      const max = Math.max(...Ls);
-      expect(max - min).toBeLessThanOrEqual(0.01);
-    });
-  }
+describe('per-flavor accent L tuning (Catppuccin methodology)', () => {
+  // Accents intentionally differ in L within a flavor — that's the whole point
+  // of per-flavor tuning. What we assert instead:
+  //   1. Brand anchors land exactly.
+  //   2. The Catppuccin L map was applied (spot-check a few values).
+  //   3. Dark flavors visually differ from each other (Neptune L ≠ Mars L).
+
+  test('Mercury yellow oklch.l ≈ Catppuccin Latte yellow L (0.714)', () => {
+    const l = palette.mercury.colors.yellow.oklch.l;
+    expect(Math.abs(l - 0.714)).toBeLessThan(0.01);
+  });
+
+  test('Mercury mauve oklch.l ≈ Catppuccin Latte mauve L (0.555)', () => {
+    const l = palette.mercury.colors.mauve.oklch.l;
+    expect(Math.abs(l - 0.555)).toBeLessThan(0.01);
+  });
+
+  test('Neptune mauve oklch.l ≈ Catppuccin Mocha mauve L (0.787)', () => {
+    const l = palette.neptune.colors.mauve.oklch.l;
+    expect(Math.abs(l - 0.787)).toBeLessThan(0.01);
+  });
+
+  test('dark flavors have distinct mauve L values (Mars ≠ Jupiter ≠ Neptune)', () => {
+    const marsL    = palette.mars.colors.mauve.oklch.l;
+    const jupiterL = palette.jupiter.colors.mauve.oklch.l;
+    const neptuneL = palette.neptune.colors.mauve.oklch.l;
+    // Each should differ by at least 0.005 from its neighbor
+    expect(Math.abs(marsL - jupiterL)).toBeGreaterThan(0.005);
+    expect(Math.abs(jupiterL - neptuneL)).toBeGreaterThan(0.005);
+  });
 });
 
 describe('determinism', () => {
@@ -107,9 +125,9 @@ describe('ansi mapping', () => {
 describe('gamut clamp diagnostics', () => {
   // Pink is the most aggressive accent (C=0.22 at H=352) — record where
   // sRGB clamping bit so future hue tweaks are visible.
-  test('Neptune pink sits at requested L within 0.005', () => {
+  test('Neptune pink sits at requested L within 0.01 (Mocha pink L = 0.870)', () => {
     const o = palette.neptune.colors.pink.oklch;
-    expect(Math.abs(o.l - 0.809)).toBeLessThan(0.01);
+    expect(Math.abs(o.l - 0.870)).toBeLessThan(0.01);
   });
 
   test('Neptune red and pink are visually distinguishable', () => {

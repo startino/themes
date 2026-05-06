@@ -63,8 +63,8 @@ describe('per-flavor.njk — matrix:[flavor]', () => {
     const neptune = outputs.find((o) => o.path.endsWith('neptune.txt'))!;
     expect(neptune.body).toContain('#171919');
     expect(neptune.body).toContain('#45dfa4');
-    // secondary = pink
-    expect(neptune.body).toContain('#ff9ec9');
+    // secondary = pink (L=0.870 per Catppuccin Mocha methodology)
+    expect(neptune.body).toContain('#ffbfda');
   });
 
   test('--flavor neptune restricts to 1 output', () => {

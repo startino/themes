@@ -60,32 +60,46 @@ const TEXT_L_LIGHT = 0.30;
  * The 14 accent hues in Catppuccin v1.8 emit order. Brand pair (`green`,
  * `pink`) carry an alias used by Startino-first templates as `{{ primary }}`
  * / `{{ secondary }}`.
+ *
+ * L values mirror Catppuccin's per-flavor-per-accent OKLCH L methodology:
+ *   mercury ← Catppuccin Latte
+ *   mars    ← Catppuccin Frappé
+ *   jupiter ← Catppuccin Macchiato
+ *   neptune ← Catppuccin Mocha (with green pinned at 0.809 for brand anchor)
+ *
+ * Hues (h) and chromas (c) are Startino's own tuned values — NOT copied
+ * from Catppuccin. Only the L methodology is borrowed.
  */
 export const ACCENTS = [
-  { id: 'rosewater', h: 20,  c: 0.06 },
-  { id: 'flamingo',  h: 18,  c: 0.10 },
-  { id: 'pink',      h: 352, c: 0.22, alias: 'secondary' as const }, // #ff4fad lifted
-  { id: 'mauve',     h: 305, c: 0.14 },
-  { id: 'red',       h: 12,  c: 0.18 },
-  { id: 'maroon',    h: 0,   c: 0.12 },
-  { id: 'peach',     h: 50,  c: 0.14 },
-  { id: 'yellow',    h: 90,  c: 0.13 },
-  { id: 'green',     h: 163, c: 0.154, alias: 'primary' as const }, // = #45dfa4 brand
-  { id: 'teal',      h: 195, c: 0.10 },
-  { id: 'sky',       h: 215, c: 0.10 },
-  { id: 'sapphire',  h: 235, c: 0.12 },
-  { id: 'blue',      h: 255, c: 0.14 },
-  { id: 'lavender',  h: 280, c: 0.10 },
+  { id: 'rosewater', h: 20,  c: 0.06,
+    L: { mercury: 0.714, mars: 0.895, jupiter: 0.911, neptune: 0.923 } },
+  { id: 'flamingo',  h: 18,  c: 0.10,
+    L: { mercury: 0.686, mars: 0.844, jupiter: 0.863, neptune: 0.880 } },
+  { id: 'pink',      h: 352, c: 0.22, alias: 'secondary' as const, // #ff4fad lifted
+    L: { mercury: 0.726, mars: 0.850, jupiter: 0.861, neptune: 0.870 } },
+  { id: 'mauve',     h: 305, c: 0.14,
+    L: { mercury: 0.555, mars: 0.765, jupiter: 0.772, neptune: 0.787 } },
+  { id: 'red',       h: 12,  c: 0.18,
+    L: { mercury: 0.550, mars: 0.717, jupiter: 0.737, neptune: 0.756 } },
+  { id: 'maroon',    h: 0,   c: 0.12,
+    L: { mercury: 0.625, mars: 0.765, jupiter: 0.770, neptune: 0.782 } },
+  { id: 'peach',     h: 50,  c: 0.14,
+    L: { mercury: 0.692, mars: 0.773, jupiter: 0.799, neptune: 0.824 } },
+  { id: 'yellow',    h: 90,  c: 0.13,
+    L: { mercury: 0.714, mars: 0.844, jupiter: 0.879, neptune: 0.919 } },
+  { id: 'green',     h: 163, c: 0.154, alias: 'primary' as const, // = #45dfa4 brand
+    L: { mercury: 0.625, mars: 0.812, jupiter: 0.835, neptune: 0.809 } }, // neptune pinned for brand
+  { id: 'teal',      h: 195, c: 0.10,
+    L: { mercury: 0.602, mars: 0.783, jupiter: 0.821, neptune: 0.858 } },
+  { id: 'sky',       h: 215, c: 0.10,
+    L: { mercury: 0.682, mars: 0.826, jupiter: 0.837, neptune: 0.847 } },
+  { id: 'sapphire',  h: 235, c: 0.12,
+    L: { mercury: 0.648, mars: 0.780, jupiter: 0.785, neptune: 0.791 } },
+  { id: 'blue',      h: 255, c: 0.14,
+    L: { mercury: 0.559, mars: 0.742, jupiter: 0.750, neptune: 0.766 } },
+  { id: 'lavender',  h: 280, c: 0.10,
+    L: { mercury: 0.664, mars: 0.810, jupiter: 0.814, neptune: 0.817 } },
 ] as const;
-
-/**
- * Equal lightness band for all 14 accents in dark flavors. Tuned to the
- * OKLCH L of `#45dfa4` (Startino mint) so green lands on brand exactly;
- * other accents inherit the same L for perceptual parity (Catppuccin's
- * core trick).
- */
-const ACCENT_L_DARK  = 0.809;
-const ACCENT_L_LIGHT = 0.55;
 
 /**
  * ANSI 16-color mapping. Code 0-7 = normal, 8-15 = bright.
@@ -218,13 +232,13 @@ function buildAnsiSub(srcColor: ColorEntry, targetName: string, code: number): A
 
 function buildFlavor(spec: typeof FLAVORS[number]): Flavor {
   const textL = spec.isDark ? TEXT_L_DARK : TEXT_L_LIGHT;
-  const accentL = spec.isDark ? ACCENT_L_DARK : ACCENT_L_LIGHT;
 
   // Build all colors keyed by id. Emit order is applied at serialize time.
   const colors: Record<string, ColorEntry> = {};
 
-  // Accents
+  // Accents — each uses its own per-flavor L from the Catppuccin-mirrored map
   ACCENTS.forEach((a, i) => {
+    const accentL = a.L[spec.id as keyof typeof a.L];
     colors[a.id] = buildColor({
       id: a.id,
       name: titleCase(a.id),
