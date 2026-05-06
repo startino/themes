@@ -1,4 +1,4 @@
-# preferred_background: #061c1d
+# preferred_background: #102424
 fish_color_normal #cbecec
 fish_color_command #3bddc8
 fish_color_param #ffc7c8
@@ -6,22 +6,22 @@ fish_color_keyword #ffbfda
 fish_color_quote #45dfa4
 fish_color_redirection #ffbfda
 fish_color_end #ffb084
-fish_color_comment #5f7878
+fish_color_comment #637d7d
 fish_color_error #ff8496
-fish_color_gray #475f5f
-fish_color_selection --background=#182e2e
-fish_color_search_match --background=#182e2e
+fish_color_gray #4e6565
+fish_color_selection --background=#203535
+fish_color_search_match --background=#203535
 fish_color_option #45dfa4
 fish_color_operator #ffbfda
 fish_color_escape #f797b5
-fish_color_autosuggestion #475f5f
+fish_color_autosuggestion #4e6565
 fish_color_cancel #ff8496
 fish_color_cwd #ffe292
 fish_color_user #79e4ef
 fish_color_host #3bddc8
 fish_color_host_remote #45dfa4
 fish_color_status #ff8496
-fish_pager_color_progress #475f5f
+fish_pager_color_progress #4e6565
 fish_pager_color_prefix #ffbfda
 fish_pager_color_completion #cbecec
-fish_pager_color_description #475f5f
+fish_pager_color_description #4e6565

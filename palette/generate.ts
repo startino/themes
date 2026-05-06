@@ -19,20 +19,21 @@ import { join } from 'node:path';
 // === DESIGN KNOBS ==========================================================
 
 export const FLAVORS = [
-  // Neptune is the brand anchor — its base sits at OKLCH L=0.211, h=197
-  // (the green tint of the original #171919). Chroma is now copied from
-  // Catppuccin Mocha base (~0.030) so the green tint is visible, not just
-  // present in math; the resulting hex is #061c1d (CIEDE2000-calibrated to
-  // match Mocha base perceived saturation, since green at our hue reads
-  // more vivid than Catppuccin's purple at identical OKLCH C — see the
-  // NEUTRAL_TARGET_DE solver below). #061c1d replaces the previous
-  // #171919 grey anchor. The other flavors mirror Catppuccin's lightness
-  // progression (Latte/Frappé/Macchiato/Mocha) so the "feel" of switching
-  // flavors matches a system most people already have a calibrated taste for.
+  // Neptune anchors to Catppuccin Mocha's base lightness (OKLCH L=0.243,
+  // measured from Mocha's #1e1e2e) so the depth of the flavor matches
+  // Mocha exactly — the only difference is hue (h=197, the green tint
+  // inherited from the original #171919 seed). Chroma is solved per role
+  // via CIEDE2000 ΔE-from-achromatic parity with Mocha (see
+  // NEUTRAL_TARGET_DE solver below) — green at our hue reads more vivid
+  // than Catppuccin's purple at identical OKLCH C, so we calibrate
+  // perceptually rather than copying chromas verbatim. The other flavors
+  // mirror Catppuccin's lightness progression (Latte/Frappé/Macchiato)
+  // so the "feel" of switching flavors matches a system most people
+  // already have a calibrated taste for.
   { id: 'mercury', name: 'Mercury', emoji: '☿', order: 0, baseL: 0.96,  isDark: false },
   { id: 'mars',    name: 'Mars',    emoji: '♂', order: 1, baseL: 0.33,  isDark: true  },
   { id: 'jupiter', name: 'Jupiter', emoji: '♃', order: 2, baseL: 0.27,  isDark: true  },
-  { id: 'neptune', name: 'Neptune', emoji: '♆', order: 3, baseL: 0.211, isDark: true  },
+  { id: 'neptune', name: 'Neptune', emoji: '♆', order: 3, baseL: 0.243, isDark: true  },
 ] as const;
 
 /**
@@ -433,7 +434,7 @@ function reportClampDeltas(palette: Record<string, unknown>): string[] {
   const lines: string[] = [];
   const targets: Array<{ flavor: string; id: string; targetHex?: string }> = [
     { flavor: 'neptune', id: 'green',  targetHex: '#45dfa4' },
-    { flavor: 'neptune', id: 'base',   targetHex: '#061c1d' }, // green-tinted dark anchor — ΔE2000-calibrated to match Mocha base perceived saturation
+    { flavor: 'neptune', id: 'base',   targetHex: '#102424' }, // green-tinted dark anchor — Mocha L parity (0.243), ΔE2000-calibrated chroma at h=197
     { flavor: 'neptune', id: 'blue',   targetHex: '#3cddc8' }, // brand teal anchor
   ];
   for (const t of targets) {

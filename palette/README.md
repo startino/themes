@@ -21,8 +21,8 @@ neptune↔mocha). We don't copy Catppuccin's OKLCH chromas verbatim —
 green at h=197 reads more saturated than purple at h=285 at identical
 numeric C, so doing so over-tints. Instead we solve for the C at our hue
 that produces the same ΔE2000 from achromatic, role by role. Neptune
-`base` lands at `#061c1d`, replacing the near-grey `#171919` of the
-original revision.
+`base` lands at `#102424` — anchored to Mocha's lightness (OKLCH L=0.243)
+so depth matches Mocha exactly; only hue differs.
 
 | Role       | Use                                           |
 | ---------- | --------------------------------------------- |
@@ -74,19 +74,19 @@ for any other without breaking visual hierarchy.
 
 | Flavor    | OKLCH L | Mood                 |
 | --------- | ------- | -------------------- |
-| Mercury   | 0.96    | sun-bleached light   |
-| Mars      | 0.33    | rust-dusty mid-dark  |
-| Jupiter   | 0.27    | banded gas-giant     |
-| Neptune ★ | 0.211   | far/cold/deep — anchor |
+| Mercury   | 0.96    | sun-bleached light       |
+| Mars      | 0.33    | rust-dusty mid-dark      |
+| Jupiter   | 0.27    | banded gas-giant         |
+| Neptune ★ | 0.243   | far/cold/deep — anchor   |
 
-★ Neptune is anchored to OKLCH `L=0.211, h=197` (the lightness/hue of
-the original `#171919` seed). Chroma is solved at build time so the
-green tint feels as saturated as Catppuccin Mocha's purple tint at the
-matching role (CIEDE2000 ΔE-from-achromatic parity, not raw OKLCH C
-parity). The rendered hex is `#061c1d`, replacing `#171919` from
-earlier revisions. Other flavors mirror Catppuccin's lightness
-progression so the "feel" of switching flavors is calibrated to a
-system many already know.
+★ Neptune is anchored to OKLCH `L=0.243, h=197` — `L=0.243` is
+Catppuccin Mocha's base lightness, `h=197` is the green tint of the
+original `#171919` seed. Chroma is solved at build time so the green
+tint feels as saturated as Mocha's purple tint at the matching role
+(CIEDE2000 ΔE-from-achromatic parity, not raw OKLCH C parity). The
+rendered base is `#102424`. Other flavors mirror Catppuccin's
+lightness progression so the "feel" of switching flavors is
+calibrated to a system many already know.
 
 ## Updating the palette
 

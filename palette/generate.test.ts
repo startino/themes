@@ -44,17 +44,17 @@ describe('palette structure', () => {
 });
 
 describe('brand anchors', () => {
-  test('Neptune base is exactly #061c1d (green-tinted dark anchor)', () => {
-    // History: #171919 (C=0.003, near-grey) → #051d1d (raw Mocha-base
-    // chroma copied) → #061c1d (CIEDE2000-calibrated to match Mocha base
-    // perceived saturation at our hue, since green at h=197 reads more
-    // vivid than purple at h=285 at identical OKLCH C).
-    expect(palette.neptune.colors.base.hex).toBe('#061c1d');
+  test('Neptune base is exactly #102424 (green-tinted dark anchor)', () => {
+    // History: #171919 (C=0.003, L=0.211 near-grey seed) → #051d1d
+    // (L=0.211, raw Mocha chroma copied) → #061c1d (L=0.211,
+    // CIEDE2000-calibrated chroma) → #102424 (L=0.243 to match Mocha
+    // base lightness exactly, CIEDE2000-calibrated chroma at h=197).
+    expect(palette.neptune.colors.base.hex).toBe('#102424');
   });
 
-  test('Neptune base sits at L=0.211 with green tint visibly applied', () => {
+  test('Neptune base sits at L=0.243 (Mocha-parity) with green tint visibly applied', () => {
     const o = palette.neptune.colors.base.oklch;
-    expect(Math.abs(o.l - 0.211)).toBeLessThan(0.005);
+    expect(Math.abs(o.l - 0.243)).toBeLessThan(0.005);
     expect(Math.abs(o.h - 197)).toBeLessThan(2);
     expect(o.c).toBeGreaterThan(0.020); // visibly tinted, was ~0.003 before
   });
