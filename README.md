@@ -125,6 +125,9 @@ recipe — including how to translate an existing Catppuccin port.
 | `tmux`    | tmux status line + panes        | `.conf`                    |
 | `fish`    | fish shell prompt + syntax      | `.theme`                   |
 | `waybar`  | Hyprland status bar             | `.css` (`@define-color`)   |
+| `nvim`    | Neovim (catppuccin/nvim plugin) | `.lua` (`color_overrides`) |
+| `btop`    | btop process viewer             | `.theme`                   |
+| `mako`    | mako notification daemon        | drop-in config             |
 
 Each port's `README.md` documents its own consumption pattern. Want a
 port that isn't here? Follow [`docs/port-creation.md`](docs/port-creation.md)
