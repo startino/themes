@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://themes.starti.no/palette.schema.json",
+  "title": "Startino Themes Palette",
+  "description": "Catppuccin-compatible palette schema with brand alias extension.",
+  "type": "object",
+  "required": ["version", "mercury", "mars", "jupiter", "neptune"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "mercury": { "$ref": "#/$defs/flavor" },
+    "mars":    { "$ref": "#/$defs/flavor" },
+    "jupiter": { "$ref": "#/$defs/flavor" },
+    "neptune": { "$ref": "#/$defs/flavor" }
+  },
+  "$defs": {
+    "flavor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "emoji", "order", "dark", "colors", "ansiColors"],
+      "properties": {
+        "name": { "type": "string" },
+        "emoji": { "type": "string" },
+        "order": { "type": "integer", "minimum": 0 },
+        "dark": { "type": "boolean" },
+        "colors": { "$ref": "#/$defs/colors" },
+        "ansiColors": { "$ref": "#/$defs/ansiColors" }
+      }
+    },
+    "colors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rosewater", "flamingo", "pink", "mauve", "red", "maroon",
+        "peach", "yellow", "green", "teal", "sky", "sapphire",
+        "blue", "lavender",
+        "text", "subtext1", "subtext0",
+        "overlay2", "overlay1", "overlay0",
+        "surface2", "surface1", "surface0",
+        "base", "mantle", "crust"
+      ],
+      "patternProperties": {
+        "^[a-z0-9]+$": { "$ref": "#/$defs/color" }
+      }
+    },
+    "color": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "order", "hex", "rgb", "hsl", "oklch", "accent"],
+      "properties": {
+        "name":  { "type": "string" },
+        "order": { "type": "integer", "minimum": 0 },
+        "hex":   { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
+        "rgb":   { "$ref": "#/$defs/rgb" },
+        "hsl":   { "$ref": "#/$defs/hsl" },
+        "oklch": { "$ref": "#/$defs/oklch" },
+        "accent": { "type": "boolean" },
+        "alias":  { "type": "string", "enum": ["primary", "secondary"] }
+      }
+    },
+    "ansiColors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"],
+      "patternProperties": {
+        "^[a-z]+$": { "$ref": "#/$defs/ansi" }
+      }
+    },
+    "ansi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "order", "normal", "bright"],
+      "properties": {
+        "name":   { "type": "string" },
+        "order":  { "type": "integer", "minimum": 0, "maximum": 7 },
+        "normal": { "$ref": "#/$defs/ansiSub" },
+        "bright": { "$ref": "#/$defs/ansiSub" }
+      }
+    },
+    "ansiSub": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "hex", "rgb", "hsl", "code"],
+      "properties": {
+        "name": { "type": "string" },
+        "hex":  { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
+        "rgb":  { "$ref": "#/$defs/rgb" },
+        "hsl":  { "$ref": "#/$defs/hsl" },
+        "code": { "type": "integer", "minimum": 0, "maximum": 15 }
+      }
+    },
+    "rgb": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["r", "g", "b"],
+      "properties": {
+        "r": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "g": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "b": { "type": "integer", "minimum": 0, "maximum": 255 }
+      }
+    },
+    "hsl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["h", "s", "l"],
+      "properties": {
+        "h": { "type": "number", "minimum": 0, "maximum": 360 },
+        "s": { "type": "number", "minimum": 0, "maximum": 100 },
+        "l": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "oklch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["l", "c", "h"],
+      "properties": {
+        "l": { "type": "number", "minimum": 0, "maximum": 1 },
+        "c": { "type": "number", "minimum": 0, "maximum": 0.5 },
+        "h": { "type": "number", "minimum": 0, "maximum": 360 }
+      }
+    }
+  }
+}

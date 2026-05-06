@@ -1,0 +1,3324 @@
+{
+  "$schema": "./palette.schema.json",
+  "version": "0.1.0",
+  "mercury": {
+    "name": "Mercury",
+    "emoji": "☿",
+    "order": 0,
+    "dark": false,
+    "colors": {
+      "rosewater": {
+        "name": "Rosewater",
+        "order": 0,
+        "hex": "#926463",
+        "rgb": {
+          "r": 146,
+          "g": 100,
+          "b": 99
+        },
+        "hsl": {
+          "h": 1,
+          "s": 19,
+          "l": 48
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.06,
+          "h": 20
+        },
+        "accent": true
+      },
+      "flamingo": {
+        "name": "Flamingo",
+        "order": 1,
+        "hex": "#a4585b",
+        "rgb": {
+          "r": 164,
+          "g": 88,
+          "b": 91
+        },
+        "hsl": {
+          "h": 357,
+          "s": 30,
+          "l": 49
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.1,
+          "h": 18
+        },
+        "accent": true
+      },
+      "pink": {
+        "name": "Pink",
+        "order": 2,
+        "hex": "#c7127f",
+        "rgb": {
+          "r": 199,
+          "g": 18,
+          "b": 127
+        },
+        "hsl": {
+          "h": 324,
+          "s": 83,
+          "l": 43
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.22,
+          "h": 352
+        },
+        "accent": true,
+        "alias": "secondary"
+      },
+      "mauve": {
+        "name": "Mauve",
+        "order": 3,
+        "hex": "#8559b2",
+        "rgb": {
+          "r": 133,
+          "g": 89,
+          "b": 178
+        },
+        "hsl": {
+          "h": 270,
+          "s": 37,
+          "l": 52
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.14,
+          "h": 305
+        },
+        "accent": true
+      },
+      "red": {
+        "name": "Red",
+        "order": 4,
+        "hex": "#c33355",
+        "rgb": {
+          "r": 195,
+          "g": 51,
+          "b": 85
+        },
+        "hsl": {
+          "h": 346,
+          "s": 58,
+          "l": 48
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.18,
+          "h": 12
+        },
+        "accent": true
+      },
+      "maroon": {
+        "name": "Maroon",
+        "order": 5,
+        "hex": "#a8506f",
+        "rgb": {
+          "r": 168,
+          "g": 80,
+          "b": 111
+        },
+        "hsl": {
+          "h": 339,
+          "s": 35,
+          "l": 49
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.12,
+          "h": 0
+        },
+        "accent": true
+      },
+      "peach": {
+        "name": "Peach",
+        "order": 6,
+        "hex": "#b0540e",
+        "rgb": {
+          "r": 176,
+          "g": 84,
+          "b": 14
+        },
+        "hsl": {
+          "h": 26,
+          "s": 86,
+          "l": 37
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.14,
+          "h": 50
+        },
+        "accent": true
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 7,
+        "hex": "#8b6e00",
+        "rgb": {
+          "r": 139,
+          "g": 110,
+          "b": 0
+        },
+        "hsl": {
+          "h": 47,
+          "s": 100,
+          "l": 27
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.112,
+          "h": 90
+        },
+        "accent": true
+      },
+      "green": {
+        "name": "Green",
+        "order": 8,
+        "hex": "#00875d",
+        "rgb": {
+          "r": 0,
+          "g": 135,
+          "b": 93
+        },
+        "hsl": {
+          "h": 162,
+          "s": 100,
+          "l": 26
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.119,
+          "h": 163
+        },
+        "accent": true,
+        "alias": "primary"
+      },
+      "teal": {
+        "name": "Teal",
+        "order": 9,
+        "hex": "#008282",
+        "rgb": {
+          "r": 0,
+          "g": 130,
+          "b": 130
+        },
+        "hsl": {
+          "h": 180,
+          "s": 100,
+          "l": 26
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.094,
+          "h": 195
+        },
+        "accent": true
+      },
+      "sky": {
+        "name": "Sky",
+        "order": 10,
+        "hex": "#007f95",
+        "rgb": {
+          "r": 0,
+          "g": 127,
+          "b": 149
+        },
+        "hsl": {
+          "h": 189,
+          "s": 100,
+          "l": 29
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.097,
+          "h": 215
+        },
+        "accent": true
+      },
+      "sapphire": {
+        "name": "Sapphire",
+        "order": 11,
+        "hex": "#007bab",
+        "rgb": {
+          "r": 0,
+          "g": 123,
+          "b": 171
+        },
+        "hsl": {
+          "h": 197,
+          "s": 100,
+          "l": 34
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.117,
+          "h": 235
+        },
+        "accent": true
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 12,
+        "hex": "#3072c1",
+        "rgb": {
+          "r": 48,
+          "g": 114,
+          "b": 193
+        },
+        "hsl": {
+          "h": 213,
+          "s": 60,
+          "l": 47
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.14,
+          "h": 255
+        },
+        "accent": true
+      },
+      "lavender": {
+        "name": "Lavender",
+        "order": 13,
+        "hex": "#666aab",
+        "rgb": {
+          "r": 102,
+          "g": 106,
+          "b": 171
+        },
+        "hsl": {
+          "h": 237,
+          "s": 29,
+          "l": 54
+        },
+        "oklch": {
+          "l": 0.55,
+          "c": 0.1,
+          "h": 280
+        },
+        "accent": true
+      },
+      "text": {
+        "name": "Text",
+        "order": 14,
+        "hex": "#2c2e2e",
+        "rgb": {
+          "r": 44,
+          "g": 46,
+          "b": 46
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 18
+        },
+        "oklch": {
+          "l": 0.3,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext1": {
+        "name": "Subtext 1",
+        "order": 15,
+        "hex": "#444646",
+        "rgb": {
+          "r": 68,
+          "g": 70,
+          "b": 70
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 27
+        },
+        "oklch": {
+          "l": 0.392,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext0": {
+        "name": "Subtext 0",
+        "order": 16,
+        "hex": "#595c5c",
+        "rgb": {
+          "r": 89,
+          "g": 92,
+          "b": 92
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 36
+        },
+        "oklch": {
+          "l": 0.472,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay2": {
+        "name": "Overlay 2",
+        "order": 17,
+        "hex": "#747676",
+        "rgb": {
+          "r": 116,
+          "g": 118,
+          "b": 118
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 46
+        },
+        "oklch": {
+          "l": 0.564,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay1": {
+        "name": "Overlay 1",
+        "order": 18,
+        "hex": "#8b8e8e",
+        "rgb": {
+          "r": 139,
+          "g": 142,
+          "b": 142
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 55
+        },
+        "oklch": {
+          "l": 0.643,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay0": {
+        "name": "Overlay 0",
+        "order": 19,
+        "hex": "#a3a6a6",
+        "rgb": {
+          "r": 163,
+          "g": 166,
+          "b": 166
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 65
+        },
+        "oklch": {
+          "l": 0.722,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface2": {
+        "name": "Surface 2",
+        "order": 20,
+        "hex": "#b8bbbb",
+        "rgb": {
+          "r": 184,
+          "g": 187,
+          "b": 187
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 73
+        },
+        "oklch": {
+          "l": 0.788,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface1": {
+        "name": "Surface 1",
+        "order": 21,
+        "hex": "#c9cbcb",
+        "rgb": {
+          "r": 201,
+          "g": 203,
+          "b": 203
+        },
+        "hsl": {
+          "h": 180,
+          "s": 3,
+          "l": 79
+        },
+        "oklch": {
+          "l": 0.841,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface0": {
+        "name": "Surface 0",
+        "order": 22,
+        "hex": "#dadddd",
+        "rgb": {
+          "r": 218,
+          "g": 221,
+          "b": 221
+        },
+        "hsl": {
+          "h": 180,
+          "s": 4,
+          "l": 86
+        },
+        "oklch": {
+          "l": 0.894,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "base": {
+        "name": "Base",
+        "order": 23,
+        "hex": "#f0f2f2",
+        "rgb": {
+          "r": 240,
+          "g": 242,
+          "b": 242
+        },
+        "hsl": {
+          "h": 180,
+          "s": 10,
+          "l": 94
+        },
+        "oklch": {
+          "l": 0.96,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "mantle": {
+        "name": "Mantle",
+        "order": 24,
+        "hex": "#e7eaea",
+        "rgb": {
+          "r": 231,
+          "g": 234,
+          "b": 234
+        },
+        "hsl": {
+          "h": 180,
+          "s": 6,
+          "l": 91
+        },
+        "oklch": {
+          "l": 0.935,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "crust": {
+        "name": "Crust",
+        "order": 25,
+        "hex": "#dfe2e2",
+        "rgb": {
+          "r": 223,
+          "g": 226,
+          "b": 226
+        },
+        "hsl": {
+          "h": 180,
+          "s": 5,
+          "l": 88
+        },
+        "oklch": {
+          "l": 0.91,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      }
+    },
+    "ansiColors": {
+      "black": {
+        "name": "Black",
+        "order": 0,
+        "normal": {
+          "name": "Surface 1",
+          "hex": "#c9cbcb",
+          "rgb": {
+            "r": 201,
+            "g": 203,
+            "b": 203
+          },
+          "hsl": {
+            "h": 180,
+            "s": 3,
+            "l": 79
+          },
+          "code": 0
+        },
+        "bright": {
+          "name": "Surface 2",
+          "hex": "#b8bbbb",
+          "rgb": {
+            "r": 184,
+            "g": 187,
+            "b": 187
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 73
+          },
+          "code": 8
+        }
+      },
+      "red": {
+        "name": "Red",
+        "order": 1,
+        "normal": {
+          "name": "Red",
+          "hex": "#c33355",
+          "rgb": {
+            "r": 195,
+            "g": 51,
+            "b": 85
+          },
+          "hsl": {
+            "h": 346,
+            "s": 58,
+            "l": 48
+          },
+          "code": 1
+        },
+        "bright": {
+          "name": "Maroon",
+          "hex": "#a8506f",
+          "rgb": {
+            "r": 168,
+            "g": 80,
+            "b": 111
+          },
+          "hsl": {
+            "h": 339,
+            "s": 35,
+            "l": 49
+          },
+          "code": 9
+        }
+      },
+      "green": {
+        "name": "Green",
+        "order": 2,
+        "normal": {
+          "name": "Green",
+          "hex": "#00875d",
+          "rgb": {
+            "r": 0,
+            "g": 135,
+            "b": 93
+          },
+          "hsl": {
+            "h": 162,
+            "s": 100,
+            "l": 26
+          },
+          "code": 2
+        },
+        "bright": {
+          "name": "Teal",
+          "hex": "#008282",
+          "rgb": {
+            "r": 0,
+            "g": 130,
+            "b": 130
+          },
+          "hsl": {
+            "h": 180,
+            "s": 100,
+            "l": 26
+          },
+          "code": 10
+        }
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 3,
+        "normal": {
+          "name": "Yellow",
+          "hex": "#8b6e00",
+          "rgb": {
+            "r": 139,
+            "g": 110,
+            "b": 0
+          },
+          "hsl": {
+            "h": 47,
+            "s": 100,
+            "l": 27
+          },
+          "code": 3
+        },
+        "bright": {
+          "name": "Peach",
+          "hex": "#b0540e",
+          "rgb": {
+            "r": 176,
+            "g": 84,
+            "b": 14
+          },
+          "hsl": {
+            "h": 26,
+            "s": 86,
+            "l": 37
+          },
+          "code": 11
+        }
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 4,
+        "normal": {
+          "name": "Blue",
+          "hex": "#3072c1",
+          "rgb": {
+            "r": 48,
+            "g": 114,
+            "b": 193
+          },
+          "hsl": {
+            "h": 213,
+            "s": 60,
+            "l": 47
+          },
+          "code": 4
+        },
+        "bright": {
+          "name": "Sapphire",
+          "hex": "#007bab",
+          "rgb": {
+            "r": 0,
+            "g": 123,
+            "b": 171
+          },
+          "hsl": {
+            "h": 197,
+            "s": 100,
+            "l": 34
+          },
+          "code": 12
+        }
+      },
+      "magenta": {
+        "name": "Magenta",
+        "order": 5,
+        "normal": {
+          "name": "Pink",
+          "hex": "#c7127f",
+          "rgb": {
+            "r": 199,
+            "g": 18,
+            "b": 127
+          },
+          "hsl": {
+            "h": 324,
+            "s": 83,
+            "l": 43
+          },
+          "code": 5
+        },
+        "bright": {
+          "name": "Mauve",
+          "hex": "#8559b2",
+          "rgb": {
+            "r": 133,
+            "g": 89,
+            "b": 178
+          },
+          "hsl": {
+            "h": 270,
+            "s": 37,
+            "l": 52
+          },
+          "code": 13
+        }
+      },
+      "cyan": {
+        "name": "Cyan",
+        "order": 6,
+        "normal": {
+          "name": "Teal",
+          "hex": "#008282",
+          "rgb": {
+            "r": 0,
+            "g": 130,
+            "b": 130
+          },
+          "hsl": {
+            "h": 180,
+            "s": 100,
+            "l": 26
+          },
+          "code": 6
+        },
+        "bright": {
+          "name": "Sky",
+          "hex": "#007f95",
+          "rgb": {
+            "r": 0,
+            "g": 127,
+            "b": 149
+          },
+          "hsl": {
+            "h": 189,
+            "s": 100,
+            "l": 29
+          },
+          "code": 14
+        }
+      },
+      "white": {
+        "name": "White",
+        "order": 7,
+        "normal": {
+          "name": "Subtext 1",
+          "hex": "#444646",
+          "rgb": {
+            "r": 68,
+            "g": 70,
+            "b": 70
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 27
+          },
+          "code": 7
+        },
+        "bright": {
+          "name": "Subtext 0",
+          "hex": "#595c5c",
+          "rgb": {
+            "r": 89,
+            "g": 92,
+            "b": 92
+          },
+          "hsl": {
+            "h": 180,
+            "s": 1,
+            "l": 36
+          },
+          "code": 15
+        }
+      }
+    }
+  },
+  "mars": {
+    "name": "Mars",
+    "emoji": "♂",
+    "order": 1,
+    "dark": true,
+    "colors": {
+      "rosewater": {
+        "name": "Rosewater",
+        "order": 0,
+        "hex": "#e5b2b1",
+        "rgb": {
+          "r": 229,
+          "g": 178,
+          "b": 177
+        },
+        "hsl": {
+          "h": 1,
+          "s": 50,
+          "l": 80
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.06,
+          "h": 20
+        },
+        "accent": true
+      },
+      "flamingo": {
+        "name": "Flamingo",
+        "order": 1,
+        "hex": "#fba6a8",
+        "rgb": {
+          "r": 251,
+          "g": 166,
+          "b": 168
+        },
+        "hsl": {
+          "h": 359,
+          "s": 90,
+          "l": 82
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 18
+        },
+        "accent": true
+      },
+      "pink": {
+        "name": "Pink",
+        "order": 2,
+        "hex": "#ff9ec9",
+        "rgb": {
+          "r": 255,
+          "g": 158,
+          "b": 201
+        },
+        "hsl": {
+          "h": 333,
+          "s": 100,
+          "l": 81
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.126,
+          "h": 352
+        },
+        "accent": true,
+        "alias": "secondary"
+      },
+      "mauve": {
+        "name": "Mauve",
+        "order": 3,
+        "hex": "#d3adff",
+        "rgb": {
+          "r": 211,
+          "g": 173,
+          "b": 255
+        },
+        "hsl": {
+          "h": 268,
+          "s": 100,
+          "l": 84
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.12,
+          "h": 305
+        },
+        "accent": true
+      },
+      "red": {
+        "name": "Red",
+        "order": 4,
+        "hex": "#ffa2ae",
+        "rgb": {
+          "r": 255,
+          "g": 162,
+          "b": 174
+        },
+        "hsl": {
+          "h": 353,
+          "s": 100,
+          "l": 82
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.11,
+          "h": 12
+        },
+        "accent": true
+      },
+      "maroon": {
+        "name": "Maroon",
+        "order": 5,
+        "hex": "#ffa0bd",
+        "rgb": {
+          "r": 255,
+          "g": 160,
+          "b": 189
+        },
+        "hsl": {
+          "h": 341,
+          "s": 100,
+          "l": 81
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.118,
+          "h": 0
+        },
+        "accent": true
+      },
+      "peach": {
+        "name": "Peach",
+        "order": 6,
+        "hex": "#ffa978",
+        "rgb": {
+          "r": 255,
+          "g": 169,
+          "b": 120
+        },
+        "hsl": {
+          "h": 22,
+          "s": 100,
+          "l": 74
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.12,
+          "h": 50
+        },
+        "accent": true
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 7,
+        "hex": "#e1bc53",
+        "rgb": {
+          "r": 225,
+          "g": 188,
+          "b": 83
+        },
+        "hsl": {
+          "h": 45,
+          "s": 70,
+          "l": 60
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.13,
+          "h": 90
+        },
+        "accent": true
+      },
+      "green": {
+        "name": "Green",
+        "order": 8,
+        "hex": "#45dfa4",
+        "rgb": {
+          "r": 69,
+          "g": 223,
+          "b": 164
+        },
+        "hsl": {
+          "h": 157,
+          "s": 71,
+          "l": 57
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.154,
+          "h": 163
+        },
+        "accent": true,
+        "alias": "primary"
+      },
+      "teal": {
+        "name": "Teal",
+        "order": 9,
+        "hex": "#68d5d4",
+        "rgb": {
+          "r": 104,
+          "g": 213,
+          "b": 212
+        },
+        "hsl": {
+          "h": 180,
+          "s": 56,
+          "l": 62
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 195
+        },
+        "accent": true
+      },
+      "sky": {
+        "name": "Sky",
+        "order": 10,
+        "hex": "#6cd1e9",
+        "rgb": {
+          "r": 108,
+          "g": 209,
+          "b": 233
+        },
+        "hsl": {
+          "h": 191,
+          "s": 74,
+          "l": 67
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 215
+        },
+        "accent": true
+      },
+      "sapphire": {
+        "name": "Sapphire",
+        "order": 11,
+        "hex": "#71ccff",
+        "rgb": {
+          "r": 113,
+          "g": 204,
+          "b": 255
+        },
+        "hsl": {
+          "h": 202,
+          "s": 100,
+          "l": 72
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.113,
+          "h": 235
+        },
+        "accent": true
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 12,
+        "hex": "#96c4ff",
+        "rgb": {
+          "r": 150,
+          "g": 196,
+          "b": 255
+        },
+        "hsl": {
+          "h": 214,
+          "s": 100,
+          "l": 79
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.098,
+          "h": 255
+        },
+        "accent": true
+      },
+      "lavender": {
+        "name": "Lavender",
+        "order": 13,
+        "hex": "#b4baff",
+        "rgb": {
+          "r": 180,
+          "g": 186,
+          "b": 255
+        },
+        "hsl": {
+          "h": 235,
+          "s": 100,
+          "l": 85
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.098,
+          "h": 280
+        },
+        "accent": true
+      },
+      "text": {
+        "name": "Text",
+        "order": 14,
+        "hex": "#e2e5e5",
+        "rgb": {
+          "r": 226,
+          "g": 229,
+          "b": 229
+        },
+        "hsl": {
+          "h": 180,
+          "s": 5,
+          "l": 89
+        },
+        "oklch": {
+          "l": 0.92,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext1": {
+        "name": "Subtext 1",
+        "order": 15,
+        "hex": "#c7caca",
+        "rgb": {
+          "r": 199,
+          "g": 202,
+          "b": 202
+        },
+        "hsl": {
+          "h": 180,
+          "s": 3,
+          "l": 79
+        },
+        "oklch": {
+          "l": 0.837,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext0": {
+        "name": "Subtext 0",
+        "order": 16,
+        "hex": "#b1b4b4",
+        "rgb": {
+          "r": 177,
+          "g": 180,
+          "b": 180
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 70
+        },
+        "oklch": {
+          "l": 0.767,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay2": {
+        "name": "Overlay 2",
+        "order": 17,
+        "hex": "#979a9a",
+        "rgb": {
+          "r": 151,
+          "g": 154,
+          "b": 154
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 60
+        },
+        "oklch": {
+          "l": 0.684,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay1": {
+        "name": "Overlay 1",
+        "order": 18,
+        "hex": "#828585",
+        "rgb": {
+          "r": 130,
+          "g": 133,
+          "b": 133
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 52
+        },
+        "oklch": {
+          "l": 0.613,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay0": {
+        "name": "Overlay 0",
+        "order": 19,
+        "hex": "#6d7070",
+        "rgb": {
+          "r": 109,
+          "g": 112,
+          "b": 112
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 43
+        },
+        "oklch": {
+          "l": 0.542,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface2": {
+        "name": "Surface 2",
+        "order": 20,
+        "hex": "#5d5f5f",
+        "rgb": {
+          "r": 93,
+          "g": 95,
+          "b": 95
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 37
+        },
+        "oklch": {
+          "l": 0.483,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface1": {
+        "name": "Surface 1",
+        "order": 21,
+        "hex": "#505252",
+        "rgb": {
+          "r": 80,
+          "g": 82,
+          "b": 82
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 32
+        },
+        "oklch": {
+          "l": 0.436,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface0": {
+        "name": "Surface 0",
+        "order": 22,
+        "hex": "#434545",
+        "rgb": {
+          "r": 67,
+          "g": 69,
+          "b": 69
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 27
+        },
+        "oklch": {
+          "l": 0.389,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "base": {
+        "name": "Base",
+        "order": 23,
+        "hex": "#343636",
+        "rgb": {
+          "r": 52,
+          "g": 54,
+          "b": 54
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 21
+        },
+        "oklch": {
+          "l": 0.33,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "mantle": {
+        "name": "Mantle",
+        "order": 24,
+        "hex": "#2d2f2f",
+        "rgb": {
+          "r": 45,
+          "g": 47,
+          "b": 47
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 18
+        },
+        "oklch": {
+          "l": 0.305,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "crust": {
+        "name": "Crust",
+        "order": 25,
+        "hex": "#272929",
+        "rgb": {
+          "r": 39,
+          "g": 41,
+          "b": 41
+        },
+        "hsl": {
+          "h": 180,
+          "s": 3,
+          "l": 16
+        },
+        "oklch": {
+          "l": 0.28,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      }
+    },
+    "ansiColors": {
+      "black": {
+        "name": "Black",
+        "order": 0,
+        "normal": {
+          "name": "Surface 1",
+          "hex": "#505252",
+          "rgb": {
+            "r": 80,
+            "g": 82,
+            "b": 82
+          },
+          "hsl": {
+            "h": 180,
+            "s": 1,
+            "l": 32
+          },
+          "code": 0
+        },
+        "bright": {
+          "name": "Surface 2",
+          "hex": "#5d5f5f",
+          "rgb": {
+            "r": 93,
+            "g": 95,
+            "b": 95
+          },
+          "hsl": {
+            "h": 180,
+            "s": 1,
+            "l": 37
+          },
+          "code": 8
+        }
+      },
+      "red": {
+        "name": "Red",
+        "order": 1,
+        "normal": {
+          "name": "Red",
+          "hex": "#ffa2ae",
+          "rgb": {
+            "r": 255,
+            "g": 162,
+            "b": 174
+          },
+          "hsl": {
+            "h": 353,
+            "s": 100,
+            "l": 82
+          },
+          "code": 1
+        },
+        "bright": {
+          "name": "Maroon",
+          "hex": "#ffa0bd",
+          "rgb": {
+            "r": 255,
+            "g": 160,
+            "b": 189
+          },
+          "hsl": {
+            "h": 341,
+            "s": 100,
+            "l": 81
+          },
+          "code": 9
+        }
+      },
+      "green": {
+        "name": "Green",
+        "order": 2,
+        "normal": {
+          "name": "Green",
+          "hex": "#45dfa4",
+          "rgb": {
+            "r": 69,
+            "g": 223,
+            "b": 164
+          },
+          "hsl": {
+            "h": 157,
+            "s": 71,
+            "l": 57
+          },
+          "code": 2
+        },
+        "bright": {
+          "name": "Teal",
+          "hex": "#68d5d4",
+          "rgb": {
+            "r": 104,
+            "g": 213,
+            "b": 212
+          },
+          "hsl": {
+            "h": 180,
+            "s": 56,
+            "l": 62
+          },
+          "code": 10
+        }
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 3,
+        "normal": {
+          "name": "Yellow",
+          "hex": "#e1bc53",
+          "rgb": {
+            "r": 225,
+            "g": 188,
+            "b": 83
+          },
+          "hsl": {
+            "h": 45,
+            "s": 70,
+            "l": 60
+          },
+          "code": 3
+        },
+        "bright": {
+          "name": "Peach",
+          "hex": "#ffa978",
+          "rgb": {
+            "r": 255,
+            "g": 169,
+            "b": 120
+          },
+          "hsl": {
+            "h": 22,
+            "s": 100,
+            "l": 74
+          },
+          "code": 11
+        }
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 4,
+        "normal": {
+          "name": "Blue",
+          "hex": "#96c4ff",
+          "rgb": {
+            "r": 150,
+            "g": 196,
+            "b": 255
+          },
+          "hsl": {
+            "h": 214,
+            "s": 100,
+            "l": 79
+          },
+          "code": 4
+        },
+        "bright": {
+          "name": "Sapphire",
+          "hex": "#71ccff",
+          "rgb": {
+            "r": 113,
+            "g": 204,
+            "b": 255
+          },
+          "hsl": {
+            "h": 202,
+            "s": 100,
+            "l": 72
+          },
+          "code": 12
+        }
+      },
+      "magenta": {
+        "name": "Magenta",
+        "order": 5,
+        "normal": {
+          "name": "Pink",
+          "hex": "#ff9ec9",
+          "rgb": {
+            "r": 255,
+            "g": 158,
+            "b": 201
+          },
+          "hsl": {
+            "h": 333,
+            "s": 100,
+            "l": 81
+          },
+          "code": 5
+        },
+        "bright": {
+          "name": "Mauve",
+          "hex": "#d3adff",
+          "rgb": {
+            "r": 211,
+            "g": 173,
+            "b": 255
+          },
+          "hsl": {
+            "h": 268,
+            "s": 100,
+            "l": 84
+          },
+          "code": 13
+        }
+      },
+      "cyan": {
+        "name": "Cyan",
+        "order": 6,
+        "normal": {
+          "name": "Teal",
+          "hex": "#68d5d4",
+          "rgb": {
+            "r": 104,
+            "g": 213,
+            "b": 212
+          },
+          "hsl": {
+            "h": 180,
+            "s": 56,
+            "l": 62
+          },
+          "code": 6
+        },
+        "bright": {
+          "name": "Sky",
+          "hex": "#6cd1e9",
+          "rgb": {
+            "r": 108,
+            "g": 209,
+            "b": 233
+          },
+          "hsl": {
+            "h": 191,
+            "s": 74,
+            "l": 67
+          },
+          "code": 14
+        }
+      },
+      "white": {
+        "name": "White",
+        "order": 7,
+        "normal": {
+          "name": "Subtext 1",
+          "hex": "#c7caca",
+          "rgb": {
+            "r": 199,
+            "g": 202,
+            "b": 202
+          },
+          "hsl": {
+            "h": 180,
+            "s": 3,
+            "l": 79
+          },
+          "code": 7
+        },
+        "bright": {
+          "name": "Subtext 0",
+          "hex": "#b1b4b4",
+          "rgb": {
+            "r": 177,
+            "g": 180,
+            "b": 180
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 70
+          },
+          "code": 15
+        }
+      }
+    }
+  },
+  "jupiter": {
+    "name": "Jupiter",
+    "emoji": "♃",
+    "order": 2,
+    "dark": true,
+    "colors": {
+      "rosewater": {
+        "name": "Rosewater",
+        "order": 0,
+        "hex": "#e5b2b1",
+        "rgb": {
+          "r": 229,
+          "g": 178,
+          "b": 177
+        },
+        "hsl": {
+          "h": 1,
+          "s": 50,
+          "l": 80
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.06,
+          "h": 20
+        },
+        "accent": true
+      },
+      "flamingo": {
+        "name": "Flamingo",
+        "order": 1,
+        "hex": "#fba6a8",
+        "rgb": {
+          "r": 251,
+          "g": 166,
+          "b": 168
+        },
+        "hsl": {
+          "h": 359,
+          "s": 90,
+          "l": 82
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 18
+        },
+        "accent": true
+      },
+      "pink": {
+        "name": "Pink",
+        "order": 2,
+        "hex": "#ff9ec9",
+        "rgb": {
+          "r": 255,
+          "g": 158,
+          "b": 201
+        },
+        "hsl": {
+          "h": 333,
+          "s": 100,
+          "l": 81
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.126,
+          "h": 352
+        },
+        "accent": true,
+        "alias": "secondary"
+      },
+      "mauve": {
+        "name": "Mauve",
+        "order": 3,
+        "hex": "#d3adff",
+        "rgb": {
+          "r": 211,
+          "g": 173,
+          "b": 255
+        },
+        "hsl": {
+          "h": 268,
+          "s": 100,
+          "l": 84
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.12,
+          "h": 305
+        },
+        "accent": true
+      },
+      "red": {
+        "name": "Red",
+        "order": 4,
+        "hex": "#ffa2ae",
+        "rgb": {
+          "r": 255,
+          "g": 162,
+          "b": 174
+        },
+        "hsl": {
+          "h": 353,
+          "s": 100,
+          "l": 82
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.11,
+          "h": 12
+        },
+        "accent": true
+      },
+      "maroon": {
+        "name": "Maroon",
+        "order": 5,
+        "hex": "#ffa0bd",
+        "rgb": {
+          "r": 255,
+          "g": 160,
+          "b": 189
+        },
+        "hsl": {
+          "h": 341,
+          "s": 100,
+          "l": 81
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.118,
+          "h": 0
+        },
+        "accent": true
+      },
+      "peach": {
+        "name": "Peach",
+        "order": 6,
+        "hex": "#ffa978",
+        "rgb": {
+          "r": 255,
+          "g": 169,
+          "b": 120
+        },
+        "hsl": {
+          "h": 22,
+          "s": 100,
+          "l": 74
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.12,
+          "h": 50
+        },
+        "accent": true
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 7,
+        "hex": "#e1bc53",
+        "rgb": {
+          "r": 225,
+          "g": 188,
+          "b": 83
+        },
+        "hsl": {
+          "h": 45,
+          "s": 70,
+          "l": 60
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.13,
+          "h": 90
+        },
+        "accent": true
+      },
+      "green": {
+        "name": "Green",
+        "order": 8,
+        "hex": "#45dfa4",
+        "rgb": {
+          "r": 69,
+          "g": 223,
+          "b": 164
+        },
+        "hsl": {
+          "h": 157,
+          "s": 71,
+          "l": 57
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.154,
+          "h": 163
+        },
+        "accent": true,
+        "alias": "primary"
+      },
+      "teal": {
+        "name": "Teal",
+        "order": 9,
+        "hex": "#68d5d4",
+        "rgb": {
+          "r": 104,
+          "g": 213,
+          "b": 212
+        },
+        "hsl": {
+          "h": 180,
+          "s": 56,
+          "l": 62
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 195
+        },
+        "accent": true
+      },
+      "sky": {
+        "name": "Sky",
+        "order": 10,
+        "hex": "#6cd1e9",
+        "rgb": {
+          "r": 108,
+          "g": 209,
+          "b": 233
+        },
+        "hsl": {
+          "h": 191,
+          "s": 74,
+          "l": 67
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 215
+        },
+        "accent": true
+      },
+      "sapphire": {
+        "name": "Sapphire",
+        "order": 11,
+        "hex": "#71ccff",
+        "rgb": {
+          "r": 113,
+          "g": 204,
+          "b": 255
+        },
+        "hsl": {
+          "h": 202,
+          "s": 100,
+          "l": 72
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.113,
+          "h": 235
+        },
+        "accent": true
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 12,
+        "hex": "#96c4ff",
+        "rgb": {
+          "r": 150,
+          "g": 196,
+          "b": 255
+        },
+        "hsl": {
+          "h": 214,
+          "s": 100,
+          "l": 79
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.098,
+          "h": 255
+        },
+        "accent": true
+      },
+      "lavender": {
+        "name": "Lavender",
+        "order": 13,
+        "hex": "#b4baff",
+        "rgb": {
+          "r": 180,
+          "g": 186,
+          "b": 255
+        },
+        "hsl": {
+          "h": 235,
+          "s": 100,
+          "l": 85
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.098,
+          "h": 280
+        },
+        "accent": true
+      },
+      "text": {
+        "name": "Text",
+        "order": 14,
+        "hex": "#e2e5e5",
+        "rgb": {
+          "r": 226,
+          "g": 229,
+          "b": 229
+        },
+        "hsl": {
+          "h": 180,
+          "s": 5,
+          "l": 89
+        },
+        "oklch": {
+          "l": 0.92,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext1": {
+        "name": "Subtext 1",
+        "order": 15,
+        "hex": "#c5c7c7",
+        "rgb": {
+          "r": 197,
+          "g": 199,
+          "b": 199
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 78
+        },
+        "oklch": {
+          "l": 0.829,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext0": {
+        "name": "Subtext 0",
+        "order": 16,
+        "hex": "#acafaf",
+        "rgb": {
+          "r": 172,
+          "g": 175,
+          "b": 175
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 68
+        },
+        "oklch": {
+          "l": 0.751,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay2": {
+        "name": "Overlay 2",
+        "order": 17,
+        "hex": "#909393",
+        "rgb": {
+          "r": 144,
+          "g": 147,
+          "b": 147
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 57
+        },
+        "oklch": {
+          "l": 0.66,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay1": {
+        "name": "Overlay 1",
+        "order": 18,
+        "hex": "#797b7b",
+        "rgb": {
+          "r": 121,
+          "g": 123,
+          "b": 123
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 48
+        },
+        "oklch": {
+          "l": 0.582,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay0": {
+        "name": "Overlay 0",
+        "order": 19,
+        "hex": "#626565",
+        "rgb": {
+          "r": 98,
+          "g": 101,
+          "b": 101
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 39
+        },
+        "oklch": {
+          "l": 0.504,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface2": {
+        "name": "Surface 2",
+        "order": 20,
+        "hex": "#505353",
+        "rgb": {
+          "r": 80,
+          "g": 83,
+          "b": 83
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 32
+        },
+        "oklch": {
+          "l": 0.439,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface1": {
+        "name": "Surface 1",
+        "order": 21,
+        "hex": "#424545",
+        "rgb": {
+          "r": 66,
+          "g": 69,
+          "b": 69
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 26
+        },
+        "oklch": {
+          "l": 0.387,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface0": {
+        "name": "Surface 0",
+        "order": 22,
+        "hex": "#353737",
+        "rgb": {
+          "r": 53,
+          "g": 55,
+          "b": 55
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 21
+        },
+        "oklch": {
+          "l": 0.335,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "base": {
+        "name": "Base",
+        "order": 23,
+        "hex": "#252727",
+        "rgb": {
+          "r": 37,
+          "g": 39,
+          "b": 39
+        },
+        "hsl": {
+          "h": 180,
+          "s": 3,
+          "l": 15
+        },
+        "oklch": {
+          "l": 0.27,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "mantle": {
+        "name": "Mantle",
+        "order": 24,
+        "hex": "#1f2121",
+        "rgb": {
+          "r": 31,
+          "g": 33,
+          "b": 33
+        },
+        "hsl": {
+          "h": 180,
+          "s": 3,
+          "l": 12
+        },
+        "oklch": {
+          "l": 0.245,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "crust": {
+        "name": "Crust",
+        "order": 25,
+        "hex": "#191b1b",
+        "rgb": {
+          "r": 25,
+          "g": 27,
+          "b": 27
+        },
+        "hsl": {
+          "h": 180,
+          "s": 4,
+          "l": 10
+        },
+        "oklch": {
+          "l": 0.22,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      }
+    },
+    "ansiColors": {
+      "black": {
+        "name": "Black",
+        "order": 0,
+        "normal": {
+          "name": "Surface 1",
+          "hex": "#424545",
+          "rgb": {
+            "r": 66,
+            "g": 69,
+            "b": 69
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 26
+          },
+          "code": 0
+        },
+        "bright": {
+          "name": "Surface 2",
+          "hex": "#505353",
+          "rgb": {
+            "r": 80,
+            "g": 83,
+            "b": 83
+          },
+          "hsl": {
+            "h": 180,
+            "s": 1,
+            "l": 32
+          },
+          "code": 8
+        }
+      },
+      "red": {
+        "name": "Red",
+        "order": 1,
+        "normal": {
+          "name": "Red",
+          "hex": "#ffa2ae",
+          "rgb": {
+            "r": 255,
+            "g": 162,
+            "b": 174
+          },
+          "hsl": {
+            "h": 353,
+            "s": 100,
+            "l": 82
+          },
+          "code": 1
+        },
+        "bright": {
+          "name": "Maroon",
+          "hex": "#ffa0bd",
+          "rgb": {
+            "r": 255,
+            "g": 160,
+            "b": 189
+          },
+          "hsl": {
+            "h": 341,
+            "s": 100,
+            "l": 81
+          },
+          "code": 9
+        }
+      },
+      "green": {
+        "name": "Green",
+        "order": 2,
+        "normal": {
+          "name": "Green",
+          "hex": "#45dfa4",
+          "rgb": {
+            "r": 69,
+            "g": 223,
+            "b": 164
+          },
+          "hsl": {
+            "h": 157,
+            "s": 71,
+            "l": 57
+          },
+          "code": 2
+        },
+        "bright": {
+          "name": "Teal",
+          "hex": "#68d5d4",
+          "rgb": {
+            "r": 104,
+            "g": 213,
+            "b": 212
+          },
+          "hsl": {
+            "h": 180,
+            "s": 56,
+            "l": 62
+          },
+          "code": 10
+        }
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 3,
+        "normal": {
+          "name": "Yellow",
+          "hex": "#e1bc53",
+          "rgb": {
+            "r": 225,
+            "g": 188,
+            "b": 83
+          },
+          "hsl": {
+            "h": 45,
+            "s": 70,
+            "l": 60
+          },
+          "code": 3
+        },
+        "bright": {
+          "name": "Peach",
+          "hex": "#ffa978",
+          "rgb": {
+            "r": 255,
+            "g": 169,
+            "b": 120
+          },
+          "hsl": {
+            "h": 22,
+            "s": 100,
+            "l": 74
+          },
+          "code": 11
+        }
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 4,
+        "normal": {
+          "name": "Blue",
+          "hex": "#96c4ff",
+          "rgb": {
+            "r": 150,
+            "g": 196,
+            "b": 255
+          },
+          "hsl": {
+            "h": 214,
+            "s": 100,
+            "l": 79
+          },
+          "code": 4
+        },
+        "bright": {
+          "name": "Sapphire",
+          "hex": "#71ccff",
+          "rgb": {
+            "r": 113,
+            "g": 204,
+            "b": 255
+          },
+          "hsl": {
+            "h": 202,
+            "s": 100,
+            "l": 72
+          },
+          "code": 12
+        }
+      },
+      "magenta": {
+        "name": "Magenta",
+        "order": 5,
+        "normal": {
+          "name": "Pink",
+          "hex": "#ff9ec9",
+          "rgb": {
+            "r": 255,
+            "g": 158,
+            "b": 201
+          },
+          "hsl": {
+            "h": 333,
+            "s": 100,
+            "l": 81
+          },
+          "code": 5
+        },
+        "bright": {
+          "name": "Mauve",
+          "hex": "#d3adff",
+          "rgb": {
+            "r": 211,
+            "g": 173,
+            "b": 255
+          },
+          "hsl": {
+            "h": 268,
+            "s": 100,
+            "l": 84
+          },
+          "code": 13
+        }
+      },
+      "cyan": {
+        "name": "Cyan",
+        "order": 6,
+        "normal": {
+          "name": "Teal",
+          "hex": "#68d5d4",
+          "rgb": {
+            "r": 104,
+            "g": 213,
+            "b": 212
+          },
+          "hsl": {
+            "h": 180,
+            "s": 56,
+            "l": 62
+          },
+          "code": 6
+        },
+        "bright": {
+          "name": "Sky",
+          "hex": "#6cd1e9",
+          "rgb": {
+            "r": 108,
+            "g": 209,
+            "b": 233
+          },
+          "hsl": {
+            "h": 191,
+            "s": 74,
+            "l": 67
+          },
+          "code": 14
+        }
+      },
+      "white": {
+        "name": "White",
+        "order": 7,
+        "normal": {
+          "name": "Subtext 1",
+          "hex": "#c5c7c7",
+          "rgb": {
+            "r": 197,
+            "g": 199,
+            "b": 199
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 78
+          },
+          "code": 7
+        },
+        "bright": {
+          "name": "Subtext 0",
+          "hex": "#acafaf",
+          "rgb": {
+            "r": 172,
+            "g": 175,
+            "b": 175
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 68
+          },
+          "code": 15
+        }
+      }
+    }
+  },
+  "neptune": {
+    "name": "Neptune",
+    "emoji": "♆",
+    "order": 3,
+    "dark": true,
+    "colors": {
+      "rosewater": {
+        "name": "Rosewater",
+        "order": 0,
+        "hex": "#e5b2b1",
+        "rgb": {
+          "r": 229,
+          "g": 178,
+          "b": 177
+        },
+        "hsl": {
+          "h": 1,
+          "s": 50,
+          "l": 80
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.06,
+          "h": 20
+        },
+        "accent": true
+      },
+      "flamingo": {
+        "name": "Flamingo",
+        "order": 1,
+        "hex": "#fba6a8",
+        "rgb": {
+          "r": 251,
+          "g": 166,
+          "b": 168
+        },
+        "hsl": {
+          "h": 359,
+          "s": 90,
+          "l": 82
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 18
+        },
+        "accent": true
+      },
+      "pink": {
+        "name": "Pink",
+        "order": 2,
+        "hex": "#ff9ec9",
+        "rgb": {
+          "r": 255,
+          "g": 158,
+          "b": 201
+        },
+        "hsl": {
+          "h": 333,
+          "s": 100,
+          "l": 81
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.126,
+          "h": 352
+        },
+        "accent": true,
+        "alias": "secondary"
+      },
+      "mauve": {
+        "name": "Mauve",
+        "order": 3,
+        "hex": "#d3adff",
+        "rgb": {
+          "r": 211,
+          "g": 173,
+          "b": 255
+        },
+        "hsl": {
+          "h": 268,
+          "s": 100,
+          "l": 84
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.12,
+          "h": 305
+        },
+        "accent": true
+      },
+      "red": {
+        "name": "Red",
+        "order": 4,
+        "hex": "#ffa2ae",
+        "rgb": {
+          "r": 255,
+          "g": 162,
+          "b": 174
+        },
+        "hsl": {
+          "h": 353,
+          "s": 100,
+          "l": 82
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.11,
+          "h": 12
+        },
+        "accent": true
+      },
+      "maroon": {
+        "name": "Maroon",
+        "order": 5,
+        "hex": "#ffa0bd",
+        "rgb": {
+          "r": 255,
+          "g": 160,
+          "b": 189
+        },
+        "hsl": {
+          "h": 341,
+          "s": 100,
+          "l": 81
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.118,
+          "h": 0
+        },
+        "accent": true
+      },
+      "peach": {
+        "name": "Peach",
+        "order": 6,
+        "hex": "#ffa978",
+        "rgb": {
+          "r": 255,
+          "g": 169,
+          "b": 120
+        },
+        "hsl": {
+          "h": 22,
+          "s": 100,
+          "l": 74
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.12,
+          "h": 50
+        },
+        "accent": true
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 7,
+        "hex": "#e1bc53",
+        "rgb": {
+          "r": 225,
+          "g": 188,
+          "b": 83
+        },
+        "hsl": {
+          "h": 45,
+          "s": 70,
+          "l": 60
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.13,
+          "h": 90
+        },
+        "accent": true
+      },
+      "green": {
+        "name": "Green",
+        "order": 8,
+        "hex": "#45dfa4",
+        "rgb": {
+          "r": 69,
+          "g": 223,
+          "b": 164
+        },
+        "hsl": {
+          "h": 157,
+          "s": 71,
+          "l": 57
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.154,
+          "h": 163
+        },
+        "accent": true,
+        "alias": "primary"
+      },
+      "teal": {
+        "name": "Teal",
+        "order": 9,
+        "hex": "#68d5d4",
+        "rgb": {
+          "r": 104,
+          "g": 213,
+          "b": 212
+        },
+        "hsl": {
+          "h": 180,
+          "s": 56,
+          "l": 62
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 195
+        },
+        "accent": true
+      },
+      "sky": {
+        "name": "Sky",
+        "order": 10,
+        "hex": "#6cd1e9",
+        "rgb": {
+          "r": 108,
+          "g": 209,
+          "b": 233
+        },
+        "hsl": {
+          "h": 191,
+          "s": 74,
+          "l": 67
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.1,
+          "h": 215
+        },
+        "accent": true
+      },
+      "sapphire": {
+        "name": "Sapphire",
+        "order": 11,
+        "hex": "#71ccff",
+        "rgb": {
+          "r": 113,
+          "g": 204,
+          "b": 255
+        },
+        "hsl": {
+          "h": 202,
+          "s": 100,
+          "l": 72
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.113,
+          "h": 235
+        },
+        "accent": true
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 12,
+        "hex": "#96c4ff",
+        "rgb": {
+          "r": 150,
+          "g": 196,
+          "b": 255
+        },
+        "hsl": {
+          "h": 214,
+          "s": 100,
+          "l": 79
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.098,
+          "h": 255
+        },
+        "accent": true
+      },
+      "lavender": {
+        "name": "Lavender",
+        "order": 13,
+        "hex": "#b4baff",
+        "rgb": {
+          "r": 180,
+          "g": 186,
+          "b": 255
+        },
+        "hsl": {
+          "h": 235,
+          "s": 100,
+          "l": 85
+        },
+        "oklch": {
+          "l": 0.809,
+          "c": 0.098,
+          "h": 280
+        },
+        "accent": true
+      },
+      "text": {
+        "name": "Text",
+        "order": 14,
+        "hex": "#e2e5e5",
+        "rgb": {
+          "r": 226,
+          "g": 229,
+          "b": 229
+        },
+        "hsl": {
+          "h": 180,
+          "s": 5,
+          "l": 89
+        },
+        "oklch": {
+          "l": 0.92,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext1": {
+        "name": "Subtext 1",
+        "order": 15,
+        "hex": "#c2c5c5",
+        "rgb": {
+          "r": 194,
+          "g": 197,
+          "b": 197
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 77
+        },
+        "oklch": {
+          "l": 0.821,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "subtext0": {
+        "name": "Subtext 0",
+        "order": 16,
+        "hex": "#a7aaaa",
+        "rgb": {
+          "r": 167,
+          "g": 170,
+          "b": 170
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 66
+        },
+        "oklch": {
+          "l": 0.736,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay2": {
+        "name": "Overlay 2",
+        "order": 17,
+        "hex": "#898c8c",
+        "rgb": {
+          "r": 137,
+          "g": 140,
+          "b": 140
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 54
+        },
+        "oklch": {
+          "l": 0.636,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay1": {
+        "name": "Overlay 1",
+        "order": 18,
+        "hex": "#707272",
+        "rgb": {
+          "r": 112,
+          "g": 114,
+          "b": 114
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 44
+        },
+        "oklch": {
+          "l": 0.551,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "overlay0": {
+        "name": "Overlay 0",
+        "order": 19,
+        "hex": "#585a5a",
+        "rgb": {
+          "r": 88,
+          "g": 90,
+          "b": 90
+        },
+        "hsl": {
+          "h": 180,
+          "s": 1,
+          "l": 35
+        },
+        "oklch": {
+          "l": 0.466,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface2": {
+        "name": "Surface 2",
+        "order": 20,
+        "hex": "#454747",
+        "rgb": {
+          "r": 69,
+          "g": 71,
+          "b": 71
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 27
+        },
+        "oklch": {
+          "l": 0.395,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface1": {
+        "name": "Surface 1",
+        "order": 21,
+        "hex": "#363838",
+        "rgb": {
+          "r": 54,
+          "g": 56,
+          "b": 56
+        },
+        "hsl": {
+          "h": 180,
+          "s": 2,
+          "l": 22
+        },
+        "oklch": {
+          "l": 0.339,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "surface0": {
+        "name": "Surface 0",
+        "order": 22,
+        "hex": "#282a2a",
+        "rgb": {
+          "r": 40,
+          "g": 42,
+          "b": 42
+        },
+        "hsl": {
+          "h": 180,
+          "s": 3,
+          "l": 16
+        },
+        "oklch": {
+          "l": 0.282,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "base": {
+        "name": "Base",
+        "order": 23,
+        "hex": "#171919",
+        "rgb": {
+          "r": 23,
+          "g": 25,
+          "b": 25
+        },
+        "hsl": {
+          "h": 180,
+          "s": 4,
+          "l": 9
+        },
+        "oklch": {
+          "l": 0.211,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "mantle": {
+        "name": "Mantle",
+        "order": 24,
+        "hex": "#111313",
+        "rgb": {
+          "r": 17,
+          "g": 19,
+          "b": 19
+        },
+        "hsl": {
+          "h": 180,
+          "s": 5,
+          "l": 7
+        },
+        "oklch": {
+          "l": 0.186,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      },
+      "crust": {
+        "name": "Crust",
+        "order": 25,
+        "hex": "#0c0e0e",
+        "rgb": {
+          "r": 12,
+          "g": 14,
+          "b": 14
+        },
+        "hsl": {
+          "h": 180,
+          "s": 7,
+          "l": 5
+        },
+        "oklch": {
+          "l": 0.161,
+          "c": 0.003,
+          "h": 197
+        },
+        "accent": false
+      }
+    },
+    "ansiColors": {
+      "black": {
+        "name": "Black",
+        "order": 0,
+        "normal": {
+          "name": "Surface 1",
+          "hex": "#363838",
+          "rgb": {
+            "r": 54,
+            "g": 56,
+            "b": 56
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 22
+          },
+          "code": 0
+        },
+        "bright": {
+          "name": "Surface 2",
+          "hex": "#454747",
+          "rgb": {
+            "r": 69,
+            "g": 71,
+            "b": 71
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 27
+          },
+          "code": 8
+        }
+      },
+      "red": {
+        "name": "Red",
+        "order": 1,
+        "normal": {
+          "name": "Red",
+          "hex": "#ffa2ae",
+          "rgb": {
+            "r": 255,
+            "g": 162,
+            "b": 174
+          },
+          "hsl": {
+            "h": 353,
+            "s": 100,
+            "l": 82
+          },
+          "code": 1
+        },
+        "bright": {
+          "name": "Maroon",
+          "hex": "#ffa0bd",
+          "rgb": {
+            "r": 255,
+            "g": 160,
+            "b": 189
+          },
+          "hsl": {
+            "h": 341,
+            "s": 100,
+            "l": 81
+          },
+          "code": 9
+        }
+      },
+      "green": {
+        "name": "Green",
+        "order": 2,
+        "normal": {
+          "name": "Green",
+          "hex": "#45dfa4",
+          "rgb": {
+            "r": 69,
+            "g": 223,
+            "b": 164
+          },
+          "hsl": {
+            "h": 157,
+            "s": 71,
+            "l": 57
+          },
+          "code": 2
+        },
+        "bright": {
+          "name": "Teal",
+          "hex": "#68d5d4",
+          "rgb": {
+            "r": 104,
+            "g": 213,
+            "b": 212
+          },
+          "hsl": {
+            "h": 180,
+            "s": 56,
+            "l": 62
+          },
+          "code": 10
+        }
+      },
+      "yellow": {
+        "name": "Yellow",
+        "order": 3,
+        "normal": {
+          "name": "Yellow",
+          "hex": "#e1bc53",
+          "rgb": {
+            "r": 225,
+            "g": 188,
+            "b": 83
+          },
+          "hsl": {
+            "h": 45,
+            "s": 70,
+            "l": 60
+          },
+          "code": 3
+        },
+        "bright": {
+          "name": "Peach",
+          "hex": "#ffa978",
+          "rgb": {
+            "r": 255,
+            "g": 169,
+            "b": 120
+          },
+          "hsl": {
+            "h": 22,
+            "s": 100,
+            "l": 74
+          },
+          "code": 11
+        }
+      },
+      "blue": {
+        "name": "Blue",
+        "order": 4,
+        "normal": {
+          "name": "Blue",
+          "hex": "#96c4ff",
+          "rgb": {
+            "r": 150,
+            "g": 196,
+            "b": 255
+          },
+          "hsl": {
+            "h": 214,
+            "s": 100,
+            "l": 79
+          },
+          "code": 4
+        },
+        "bright": {
+          "name": "Sapphire",
+          "hex": "#71ccff",
+          "rgb": {
+            "r": 113,
+            "g": 204,
+            "b": 255
+          },
+          "hsl": {
+            "h": 202,
+            "s": 100,
+            "l": 72
+          },
+          "code": 12
+        }
+      },
+      "magenta": {
+        "name": "Magenta",
+        "order": 5,
+        "normal": {
+          "name": "Pink",
+          "hex": "#ff9ec9",
+          "rgb": {
+            "r": 255,
+            "g": 158,
+            "b": 201
+          },
+          "hsl": {
+            "h": 333,
+            "s": 100,
+            "l": 81
+          },
+          "code": 5
+        },
+        "bright": {
+          "name": "Mauve",
+          "hex": "#d3adff",
+          "rgb": {
+            "r": 211,
+            "g": 173,
+            "b": 255
+          },
+          "hsl": {
+            "h": 268,
+            "s": 100,
+            "l": 84
+          },
+          "code": 13
+        }
+      },
+      "cyan": {
+        "name": "Cyan",
+        "order": 6,
+        "normal": {
+          "name": "Teal",
+          "hex": "#68d5d4",
+          "rgb": {
+            "r": 104,
+            "g": 213,
+            "b": 212
+          },
+          "hsl": {
+            "h": 180,
+            "s": 56,
+            "l": 62
+          },
+          "code": 6
+        },
+        "bright": {
+          "name": "Sky",
+          "hex": "#6cd1e9",
+          "rgb": {
+            "r": 108,
+            "g": 209,
+            "b": 233
+          },
+          "hsl": {
+            "h": 191,
+            "s": 74,
+            "l": 67
+          },
+          "code": 14
+        }
+      },
+      "white": {
+        "name": "White",
+        "order": 7,
+        "normal": {
+          "name": "Subtext 1",
+          "hex": "#c2c5c5",
+          "rgb": {
+            "r": 194,
+            "g": 197,
+            "b": 197
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 77
+          },
+          "code": 7
+        },
+        "bright": {
+          "name": "Subtext 0",
+          "hex": "#a7aaaa",
+          "rgb": {
+            "r": 167,
+            "g": 170,
+            "b": 170
+          },
+          "hsl": {
+            "h": 180,
+            "s": 2,
+            "l": 66
+          },
+          "code": 15
+        }
+      }
+    }
+  }
+}
