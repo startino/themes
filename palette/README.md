@@ -13,7 +13,13 @@ Single source of truth for every Startino color, in every flavor.
 
 ### 12 neutrals (per flavor)
 
-Hue-tinted at H=197 (the cyan tint of `#171919`), chroma 0.003.
+Hue-tinted at H=197 (the green tint inherited from the original `#171919`
+seed). Chroma is **per-role**, copied from Catppuccin's official neutrals
+of the paired flavor (mercury↔latte, mars↔frappé, jupiter↔macchiato,
+neptune↔mocha) so the saturation ramps the same way Catppuccin's does:
+~0.020 at `crust` up to ~0.043 at `text`. The tint is now visible (not
+just present in math); Neptune `base` lands at `#051d1d`, replacing the
+near-grey `#171919` of earlier revisions.
 
 | Role       | Use                                           |
 | ---------- | --------------------------------------------- |
@@ -70,7 +76,10 @@ for any other without breaking visual hierarchy.
 | Jupiter   | 0.27    | banded gas-giant     |
 | Neptune ★ | 0.211   | far/cold/deep — anchor |
 
-★ Neptune is anchored to `base = #171919`. Other flavors are tuned to
+★ Neptune is anchored to OKLCH `L=0.211, h=197` (the lightness/hue of
+the original `#171919` seed). Chroma now matches Catppuccin Mocha's
+base chroma (~0.030), making the green tint visible — the rendered hex
+is `#051d1d`, replacing `#171919` from earlier revisions. Other flavors
 mirror Catppuccin's lightness progression so the "feel" of switching
 flavors is calibrated to a system many already know.
 

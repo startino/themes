@@ -52,16 +52,20 @@ maintainers do, when the palette or a template changes.
 
 | Flavor      | Mood                          | Base       |
 | ----------- | ----------------------------- | ---------- |
-| Mercury ☿   | sun-bleached light            | `#f0f2f2`  |
-| Mars ♂      | rust-dusty mid-dark           | ≈`#2e3232` |
-| Jupiter ♃   | banded gas-giant dark         | ≈`#232627` |
-| Neptune ♆ ★ | far/cold/deep — brand anchor  | `#171919`  |
+| Mercury ☿   | sun-bleached light            | `#eef3f3`  |
+| Mars ♂      | rust-dusty mid-dark           | `#203b3b`  |
+| Jupiter ♃   | banded gas-giant dark         | `#0e2c2c`  |
+| Neptune ♆ ★ | far/cold/deep — brand anchor  | `#051d1d`  |
 
-Neptune is the brand anchor: its `base` is exactly `#171919` and its
-`green` is exactly `#45dfa4` by construction. The other three mirror
-Catppuccin's Latte / Frappé / Macchiato lightness progression so
-switching among them feels familiar to anyone with calibrated taste
-for that system.
+Neptune is the brand anchor: its `green` is exactly `#45dfa4` by
+construction, and its `base` lands at `#051d1d` — the green tint of
+OKLCH(L=0.211, h=197) at Catppuccin-Mocha-level chroma (~0.030). All
+neutrals carry a per-role chroma copied from Catppuccin's own ramp
+(~0.020 at `crust`, climbing to ~0.043 at `text`), so the tint is
+visibly present rather than mathematically present. The other three
+flavors mirror Catppuccin's Latte / Frappé / Macchiato progression
+so switching among them feels familiar to anyone with calibrated
+taste for that system.
 
 Every accent's lightness is tuned per-flavor (warm hues lift, cool
 hues drop), so yellow reads as proper goldenrod in Mercury rather

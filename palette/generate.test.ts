@@ -44,12 +44,25 @@ describe('palette structure', () => {
 });
 
 describe('brand anchors', () => {
-  test('Neptune base is exactly #171919', () => {
-    expect(palette.neptune.colors.base.hex).toBe('#171919');
+  test('Neptune base is exactly #051d1d (green-tinted dark anchor)', () => {
+    // Was #171919 (C=0.003) before adopting Catppuccin Mocha base chroma.
+    // Now C=0.030 at L=0.211, h=197 → visible green tint, deliberate.
+    expect(palette.neptune.colors.base.hex).toBe('#051d1d');
+  });
+
+  test('Neptune base sits at L=0.211 with green tint visibly applied', () => {
+    const o = palette.neptune.colors.base.oklch;
+    expect(Math.abs(o.l - 0.211)).toBeLessThan(0.005);
+    expect(Math.abs(o.h - 197)).toBeLessThan(2);
+    expect(o.c).toBeGreaterThan(0.020); // visibly tinted, was ~0.003 before
   });
 
   test('Neptune green is exactly #45dfa4 (mint primary)', () => {
     expect(palette.neptune.colors.green.hex).toBe('#45dfa4');
+  });
+
+  test('Neptune blue is exactly #3bddc8 (brand teal anchor; rgb(60 221 199) lifted to sRGB)', () => {
+    expect(palette.neptune.colors.blue.hex).toBe('#3bddc8');
   });
 
   test('green carries alias=primary', () => {
@@ -60,6 +73,34 @@ describe('brand anchors', () => {
   test('pink carries alias=secondary', () => {
     expect(palette.neptune.colors.pink.alias).toBe('secondary');
     expect(palette.mercury.colors.pink.alias).toBe('secondary');
+  });
+});
+
+describe('slot remaps (style guide §7)', () => {
+  // These slots have their hex deliberately diverged from Catppuccin's
+  // semantic intent — see docs/style-guide.md §7. Tests pin the invariants.
+
+  test('mauve == pink, byte-identical hex per flavor (collapse)', () => {
+    for (const flavor of FLAVORS) {
+      const f = palette[flavor.id];
+      expect(f.colors.mauve.hex).toBe(f.colors.pink.hex);
+    }
+  });
+
+  test('Neptune blue lands in the teal-cyan hue family (h≈182)', () => {
+    const o = palette.neptune.colors.blue.oklch;
+    expect(Math.abs(o.h - 182)).toBeLessThan(2);
+  });
+
+  test('Neptune lavender lands in the green-family hue space (h≈150, sage)', () => {
+    const o = palette.neptune.colors.lavender.oklch;
+    expect(Math.abs(o.h - 150)).toBeLessThan(2);
+    expect(o.c).toBeLessThan(0.10); // soft companion, not as bold as brand mint
+  });
+
+  test('teal shifted from h=195 to h=205 (sky-leaning, distinct from blue h=182)', () => {
+    const o = palette.neptune.colors.teal.oklch;
+    expect(Math.abs(o.h - 205)).toBeLessThan(2);
   });
 });
 
@@ -75,21 +116,18 @@ describe('per-flavor accent L tuning (Catppuccin methodology)', () => {
     expect(Math.abs(l - 0.714)).toBeLessThan(0.01);
   });
 
-  test('Mercury mauve oklch.l ≈ Catppuccin Latte mauve L (0.555)', () => {
-    const l = palette.mercury.colors.mauve.oklch.l;
-    expect(Math.abs(l - 0.555)).toBeLessThan(0.01);
-  });
+  // Mauve L tests removed: mauve now collapses to pink (style guide §7), so
+  // its L tracks pink's per flavor. Pink's L spec covers the invariants that
+  // used to be checked via mauve. The collapse itself is asserted in the
+  // "slot remaps" describe block above.
 
-  test('Neptune mauve oklch.l ≈ Catppuccin Mocha mauve L (0.787)', () => {
-    const l = palette.neptune.colors.mauve.oklch.l;
-    expect(Math.abs(l - 0.787)).toBeLessThan(0.01);
-  });
-
-  test('dark flavors have distinct mauve L values (Mars ≠ Jupiter ≠ Neptune)', () => {
-    const marsL    = palette.mars.colors.mauve.oklch.l;
-    const jupiterL = palette.jupiter.colors.mauve.oklch.l;
-    const neptuneL = palette.neptune.colors.mauve.oklch.l;
-    // Each should differ by at least 0.005 from its neighbor
+  test('dark flavors have distinct pink L values (Mars ≠ Jupiter ≠ Neptune)', () => {
+    // Pink-family L progression — proves per-flavor tuning is applied.
+    // Previously this was a mauve check; mauve's collapse to pink means the
+    // same invariant is now expressed via pink directly.
+    const marsL    = palette.mars.colors.pink.oklch.l;
+    const jupiterL = palette.jupiter.colors.pink.oklch.l;
+    const neptuneL = palette.neptune.colors.pink.oklch.l;
     expect(Math.abs(marsL - jupiterL)).toBeGreaterThan(0.005);
     expect(Math.abs(jupiterL - neptuneL)).toBeGreaterThan(0.005);
   });

@@ -19,19 +19,51 @@ import { join } from 'node:path';
 // === DESIGN KNOBS ==========================================================
 
 export const FLAVORS = [
-  // Neptune is the brand anchor — its base color is exactly #171919 by
-  // construction. The other flavors mirror Catppuccin's lightness progression
-  // (Latte/Frappé/Macchiato/Mocha) so the "feel" of switching flavors matches
-  // a system most people already have a calibrated taste for.
+  // Neptune is the brand anchor — its base sits at OKLCH L=0.211, h=197
+  // (the green tint of the original #171919). Chroma is now copied from
+  // Catppuccin Mocha base (~0.030) so the green tint is visible, not just
+  // present in math; the resulting hex is #051d1d, replacing the previous
+  // #171919 anchor. The other flavors mirror Catppuccin's lightness
+  // progression (Latte/Frappé/Macchiato/Mocha) so the "feel" of switching
+  // flavors matches a system most people already have a calibrated taste for.
   { id: 'mercury', name: 'Mercury', emoji: '☿', order: 0, baseL: 0.96,  isDark: false },
   { id: 'mars',    name: 'Mars',    emoji: '♂', order: 1, baseL: 0.33,  isDark: true  },
   { id: 'jupiter', name: 'Jupiter', emoji: '♃', order: 2, baseL: 0.27,  isDark: true  },
   { id: 'neptune', name: 'Neptune', emoji: '♆', order: 3, baseL: 0.211, isDark: true  },
 ] as const;
 
-/** Hue + chroma for all neutrals. Derived from the OKLCH of #171919. */
+/**
+ * Surface hue: the OKLCH hue of the original #171919 anchor — preserves
+ * Startino's green tint across every neutral.
+ */
 const SURFACE_HUE = 197;
-const SURFACE_CHROMA = 0.003;
+
+/**
+ * Catppuccin's official neutrals — embedded here so we can lift its chroma
+ * ramp (saturation climbs from ~0.020 at `crust` to ~0.043 at `text`)
+ * verbatim per role, per flavor. We adopt only the chromas; L stays on
+ * Startino's per-flavor formula (preserves the dark-anchor tuning), and
+ * hue stays at SURFACE_HUE (Startino's green tint).
+ *
+ * Per-flavor mapping mirrors the L methodology already used for accents:
+ *   mercury ← Catppuccin Latte
+ *   mars    ← Catppuccin Frappé
+ *   jupiter ← Catppuccin Macchiato
+ *   neptune ← Catppuccin Mocha
+ */
+const CATPPUCCIN_NEUTRAL_HEXES = {
+  latte:     { crust: '#dce0e8', mantle: '#e6e9ef', base: '#eff1f5', surface0: '#ccd0da', surface1: '#bcc0cc', surface2: '#acb0be', overlay0: '#9ca0b0', overlay1: '#8c8fa1', overlay2: '#7c7f93', subtext0: '#6c6f85', subtext1: '#5c5f77', text: '#4c4f69' },
+  frappe:    { crust: '#232634', mantle: '#292c3c', base: '#303446', surface0: '#414559', surface1: '#51576d', surface2: '#626880', overlay0: '#737994', overlay1: '#838ba7', overlay2: '#949cbb', subtext0: '#a5adce', subtext1: '#b5bfe2', text: '#c6d0f5' },
+  macchiato: { crust: '#181926', mantle: '#1e2030', base: '#24273a', surface0: '#363a4f', surface1: '#494d64', surface2: '#5b6078', overlay0: '#6e738d', overlay1: '#8087a2', overlay2: '#939ab7', subtext0: '#a5adcb', subtext1: '#b8c0e0', text: '#cad3f5' },
+  mocha:     { crust: '#11111b', mantle: '#181825', base: '#1e1e2e', surface0: '#313244', surface1: '#45475a', surface2: '#585b70', overlay0: '#6c7086', overlay1: '#7f849c', overlay2: '#9399b2', subtext0: '#a6adc8', subtext1: '#bac2de', text: '#cdd6f4' },
+} as const;
+
+const FLAVOR_CPP_PAIR = {
+  mercury: 'latte',
+  mars:    'frappe',
+  jupiter: 'macchiato',
+  neptune: 'mocha',
+} as const;
 
 /**
  * Lightness recipe for the 12 neutral roles.
@@ -87,8 +119,11 @@ export const ACCENTS = [
     L: { mercury: 0.686, mars: 0.844, jupiter: 0.863, neptune: 0.880 } },
   { id: 'pink',      h: 352, c: 0.22, alias: 'secondary' as const, // #ff4fad lifted
     L: { mercury: 0.726, mars: 0.850, jupiter: 0.861, neptune: 0.870 } },
-  { id: 'mauve',     h: 305, c: 0.14,
-    L: { mercury: 0.555, mars: 0.765, jupiter: 0.772, neptune: 0.787 } },
+  // Mauve collapses to pink: same h/c/L as the pink row, so mauve's hex is
+  // byte-identical to pink's per flavor. Catppuccin modules referencing
+  // @thm_mauve render as Startino's secondary brand color. See style guide §7.
+  { id: 'mauve',     h: 352, c: 0.22,
+    L: { mercury: 0.726, mars: 0.850, jupiter: 0.861, neptune: 0.870 } },
   { id: 'red',       h: 12,  c: 0.18,
     L: { mercury: 0.550, mars: 0.717, jupiter: 0.737, neptune: 0.756 } },
   { id: 'maroon',    h: 0,   c: 0.12,
@@ -99,15 +134,24 @@ export const ACCENTS = [
     L: { mercury: 0.714, mars: 0.844, jupiter: 0.879, neptune: 0.919 } },
   { id: 'green',     h: 163, c: 0.154, alias: 'primary' as const, // = #45dfa4 brand
     L: { mercury: 0.625, mars: 0.812, jupiter: 0.835, neptune: 0.809 } }, // neptune pinned for brand
-  { id: 'teal',      h: 195, c: 0.10,
+  // Teal shifted from h=195 to h=205 so it reads as clearly distinct from
+  // blue (now at h=182, brand-teal-anchored) — avoids two near-identical teals.
+  { id: 'teal',      h: 205, c: 0.10,
     L: { mercury: 0.602, mars: 0.783, jupiter: 0.821, neptune: 0.858 } },
   { id: 'sky',       h: 215, c: 0.10,
     L: { mercury: 0.682, mars: 0.826, jupiter: 0.837, neptune: 0.847 } },
   { id: 'sapphire',  h: 235, c: 0.12,
     L: { mercury: 0.648, mars: 0.780, jupiter: 0.785, neptune: 0.791 } },
-  { id: 'blue',      h: 255, c: 0.14,
-    L: { mercury: 0.559, mars: 0.742, jupiter: 0.750, neptune: 0.766 } },
-  { id: 'lavender',  h: 280, c: 0.10,
+  // Blue anchored at Startino brand teal #3cddc8 — h=182 (sits 19° from green
+  // h=163), c=0.133. Neptune L pinned at 0.812 so the rendered hex matches the
+  // brand color exactly. Catppuccin modules referencing @thm_blue render as
+  // Startino's brand teal. See style guide §7.
+  { id: 'blue',      h: 182, c: 0.133,
+    L: { mercury: 0.559, mars: 0.742, jupiter: 0.750, neptune: 0.812 } },
+  // Lavender shifted from h=280 (purple) to h=150 (sage / soft green) at lower
+  // chroma — joins the green family as a desaturated companion to brand mint
+  // (which sits at h=163, c=0.154). See style guide §7.
+  { id: 'lavender',  h: 150, c: 0.07,
     L: { mercury: 0.664, mars: 0.810, jupiter: 0.814, neptune: 0.817 } },
 ] as const;
 
@@ -261,18 +305,26 @@ function buildFlavor(spec: typeof FLAVORS[number]): Flavor {
     });
   });
 
-  // Neutrals
+  // Neutrals — L from Startino's per-flavor formula; chroma copied per-role
+  // from the paired Catppuccin flavor (see CATPPUCCIN_NEUTRAL_HEXES); hue
+  // pinned to SURFACE_HUE so every neutral inherits the green tint.
+  const cppFlavor = FLAVOR_CPP_PAIR[spec.id as keyof typeof FLAVOR_CPP_PAIR];
+  const cppNeutrals = CATPPUCCIN_NEUTRAL_HEXES[cppFlavor];
+  const oklchOf = converter('oklch');
   NEUTRAL_ORDER.forEach((role, i) => {
     const ramp = NEUTRAL_RAMP[role as keyof typeof NEUTRAL_RAMP];
     const L = ramp.kind === 'delta'
       ? spec.baseL + ramp.v
       : spec.baseL + (textL - spec.baseL) * ramp.v;
+    const cppHex = cppNeutrals[role as keyof typeof cppNeutrals];
+    const cppOklch = oklchOf(cppHex)!;
+    const C = cppOklch.c ?? 0;
     colors[role] = buildColor({
       id: role,
       name: titleCase(role),
       order: ACCENTS.length + i,
       l: L,
-      c: SURFACE_CHROMA,
+      c: C,
       h: SURFACE_HUE,
       accent: false,
     });
@@ -324,7 +376,8 @@ function reportClampDeltas(palette: Record<string, unknown>): string[] {
   const lines: string[] = [];
   const targets: Array<{ flavor: string; id: string; targetHex?: string }> = [
     { flavor: 'neptune', id: 'green',  targetHex: '#45dfa4' },
-    { flavor: 'neptune', id: 'base',   targetHex: '#171919' },
+    { flavor: 'neptune', id: 'base',   targetHex: '#051d1d' }, // green-tinted dark anchor (was #171919 at C=0.003)
+    { flavor: 'neptune', id: 'blue',   targetHex: '#3cddc8' }, // brand teal anchor
   ];
   for (const t of targets) {
     const flavor = palette[t.flavor] as Flavor;
