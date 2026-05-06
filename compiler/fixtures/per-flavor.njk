@@ -1,0 +1,6 @@
+---
+filename: "out/{{ flavor.identifier }}.txt"
+matrix:
+  - flavor
+---
+{{ flavor.name }}: {{ base | hex }} / {{ primary | hex }} / {{ secondary | hex }}

@@ -1,0 +1,7 @@
+---
+filename: "out/{{ flavor.identifier }}.txt"
+matrix:
+  - flavor
+skip: "flavor.identifier == 'mercury'"
+---
+{{ flavor.name }}
